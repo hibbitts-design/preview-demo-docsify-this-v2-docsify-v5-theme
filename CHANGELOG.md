@@ -33,7 +33,16 @@
 **Breaking:**
 * With the use of Docsify v5, Legacy Browsers (for example, Internet Explorer 11) are no longer supported 
 
-## [1.10.5] - 08/01/2025
+## [1.10.6] - XX/XX/2025
+
+**New:**
+* Availability of alias domain Share-This.net for non Docsify-This branded URLs
+
+**Improved:**
+* Updated ReadMe
+* Removed image for Open Graph
+
+## [1.10.5] - 08/01/2025☀️
 
 **New:**
 * Added CSS Markdown classes to support cards (`card` & `card-rounded`) and responsive card lists (`card-list`)
