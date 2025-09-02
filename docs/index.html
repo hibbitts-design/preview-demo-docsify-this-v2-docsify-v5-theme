@@ -55,7 +55,7 @@
     media="(prefers-color-scheme: dark)" data-sheet="dark-mode-auto" />
   <!-- <link rel="stylesheet" href="assets/vendor/themes/addons/core-dark.min.css" media="(prefers-color-scheme: dark)"/> -->
 
-  <link rel="stylesheet" href="assets/css/docsify-this.css">
+  <link rel="stylesheet" href="assets/css/docsify-this-v2.css">
   <link rel="stylesheet" href="assets/css/docsify-v5-core.css">
   <link rel="stylesheet" href="assets/css/fonts.css">
 
@@ -655,7 +655,7 @@
             return;
           } else if ((!(isExtensionAllowed(lastSegment)) || lastSegment === "") && !(hedgedocInstances.includes(hostname))) {
             // Filename without supported extension or missing filename and not a HedgeDoc instance
-            alert("Please include the full path and filename with a supported extension (" + displayAllowedFileExtensions() + ") in the file URL, for example 'https://github.com/hibbitts-design/docsify-this-one-page-article/blob/main/home.md'.");
+            alert("Please include the full path and filename with a supported extension (" + displayAllowedFileExtensions() + ") in the file URL.\n\nFor example 'https://github.com/hibbitts-design/docsify-this-one-page-article/blob/main/home.md'.");
             selectText();
             return;
           } else {
@@ -1330,7 +1330,12 @@
 
                 switch (status) {
                   case 404:
-                    errorMessage = `Looks like the file **${file}** couldn't be found on the server. Please check if the **basePath** and **homepage** URL parameters are correct or if the file has been moved or deleted.\n\nError code ${status}`;
+                    const isGitHubOrCodeberg = window.$docsify['basePath'].includes('github') || window.$docsify['basePath'].includes('codeberg');
+                    let publicRepoNote = "";
+                    if (isGitHubOrCodeberg) {
+                      publicRepoNote = " Also ensure your GitHub or Codeberg repository is public.";
+                    }
+                    errorMessage = `Looks like the file **${file}** couldn't be found on the server. Please check if the **basePath** and **homepage** URL parameters are correct or if the file has been moved or deleted.${publicRepoNote}\n\nError code ${status}`;
                     break;
                   case 500:
                     errorMessage = `The server encountered an internal error while trying to fetch **${file}**.\nError code ${status}`;
@@ -2039,19 +2044,22 @@
 
   <!-- Adjust Page Margins When Standalone or Embedded -->
   <script>
-    if ((!(getURLParameterByName('sidebar') || (!standalone))) && ((!getURLParameterByName(['core-theme-styles','coreThemeStyles','docsify-core-theme'], null, null, window.location.href, true) === 'true') || (!corethemestyles)) || (!(getURLParameterByName('basePath')))) {
+    if (getURLParameterByName(['standalone', 'embedded',]) || standalone) {
       const root_theme = document.querySelector(':root');
-      root_theme.style.setProperty('--content-margin-inline', '14px');
+      maxwidth = getURLParameterByName(['max-width', 'maxWidth'], null, null, window.location.href, true);
+      if (!(maxwidth === false)) {
+        if (!(isNaN(maxwidth))) {
+          root_theme.style.setProperty('--content-margin-inline', '0px');
+        }
+      } else {
+        root_theme.style.setProperty('--content-margin-inline', '14px');
+      }     
     }
   </script>
 
   <!-- docsify-tabs (latest v1.x.x) -->
   <!-- <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script> -->
   <script src="assets/vendor/docsify/plugins/docsify-tabs.min.js"></script>
-
-  <!-- flexible-alerts -->
-  <!-- <script src="https://unpkg.com/docsify-plugin-flexible-alerts"></script> -->
-  <script src="assets/vendor/docsify/plugins/docsify-plugin-flexible-alerts.min.js"></script>
   
   <!-- Load custom.css file only when displaying Markdown files -->
   <script>
@@ -2185,7 +2193,7 @@
       maxwidth = getURLParameterByName(['max-width', 'maxWidth'], null, null, window.location.href, true);
       if (!(maxwidth === false)) {
         if (!(isNaN(maxwidth))) {
-          maxwidth += 'px'; // Append 'px' if no unit is provided
+          maxwidth += '%'; // Append '%' if no unit is provided
         }
         document.documentElement.style.setProperty('--content-max-width', maxwidth);
       }

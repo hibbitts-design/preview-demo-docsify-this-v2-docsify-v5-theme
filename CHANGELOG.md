@@ -29,18 +29,24 @@
 
 **Bugfix:**
 * Handle use of Coverpage title link with duplicate id via enhanced target scrolling
+* Fixed Font Awesome plugin regex to only match :fa- prefixed patterns
 
 **Breaking:**
 * With the use of Docsify v5, Legacy Browsers (for example, Internet Explorer 11) are no longer supported 
 
-## [1.10.6] - XX/XX/2025
+## [1.10.6] - 09/02/2025🏫
 
 **New:**
 * Availability of alias domain Share-This.net for non Docsify-This branded URLs
+* Support of optional max-width parameter (`max-width`) to set custom page content width
 
 **Improved:**
 * Updated ReadMe
-* Removed image for Open Graph
+* Removed image for Twitter Cards and Open Graph
+* Relocated enable search field checkbox to basic URL parameters
+* Minor Web Page Builder UI updates
+* Improved file error messages
+* Set page margins to 0 when max-width is set to 100%
 
 ## [1.10.5] - 08/01/2025☀️
 

@@ -1,16 +1,10 @@
-<style>
-  :root {
-    --font-family: system-ui, sans-serif;
-  }
-</style>
-
 <div id="docsifythis">
 
 <div class="docsifythisheader">
 <div style="margin-bottom:6px; margin-right:-6px; text-align:right;"><a class="navpill" href="https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/preview-docsify-this-v2/refs/heads/test-docsify-this-v2&sidebar=true&searchbox=true&browser-tab-title=Docsify-This%20ReadMe&edit-link-text=Suggest%20an%20Edit%20on%20GitHub&maxLevel=4&header-weight=600&zoom-images=true&dark-mode=auto" target="_blank"><i class="fas fa-book-open fa-fw" style="margin-right:2px;"></i>Docsify-This ReadMe Docs</a><a class="navpill" href="https://discord.gg/docsify" target="_blank"><i class="fab fa-discord fa-fw" style="margin-right:2px;"></i>Docsify Discord Chat</a><a class="navpill" href="https://github.com/hibbitts-design/docsify-this" target="_blank"><i class="fab fa-github fa-fw" style="margin-right:2px;"></i>GitHub</a></div>
   <div class="logoandtext">
     <img src='https://raw.githubusercontent.com/paulhibbitts/test-docsify-this/main/docs/images/icon.svg' alt='Docsify Logo' />
-    <div class="title-with-version"><h1><span class="highlight">Docsify&#8288;&#8211;&#8288;This<span></h1><span class="version-tag">v2.0</span></div>
+    <div class="title-with-version"><h1><span class="highlight">Docsify&#8288;&#8211;&#8288;This</span></h1><span class="version-tag">v2.0</span></div>
   </div>
 </div>
 
@@ -44,8 +38,9 @@ This open-source web app, built with magical documentation site generator [Docsi
 <p style="margin-bottom:-8px;">Enter the URL of a Markdown file and view that file as a web page in a new Browser tab. The resulting Docsify-This page URL can be copied and shared or used as an iFrame source URL.</p>
 
 **Markdown File URL** (GitHub, Codeberg or raw source URL):  
+
 <textarea
-    style="border-radius: 7px; border-color: #8e8f9d; resize: none; width: 100%; font-family: inherit; overflow: hidden; box-sizing: border-box;"
+    style="resize: none; width: 100%; font-family: inherit; overflow: hidden; box-sizing: border-box;"
     aria-label="Markdown File URL (GitHub, Codeberg or raw source URL)"
     name="markdownFileURL"
     id="docsifythisurlfield"
@@ -74,26 +69,26 @@ Page layout:
 <div style="display: flex; margin-top: -3px;">
 
 <label>
-  <input type="radio" name="pagestyle" id="stylecontentonly" aria-label="Page Content Only" checked>
-  <img style="padding: 1px;" src="images/contentonly.png" alt="Page Content Only">
+  <input type="radio" name="pagestyle" id="stylecontentonly" aria-label="Page Content Only" checked/>
+  <img style="padding: 1px;" src="images/contentonly.png" alt="Page Content Only"/>
   <figcaption id="caption">Content Only</figcaption>
 </label>
 
 <label>
-  <input type="radio" name="pagestyle" id="styletoc" aria-label="Page with Table of Contents">
-  <img style="padding: 1px;" src="images/toc.png" alt="Page with Table of Contents">
+  <input type="radio" name="pagestyle" id="styletoc" aria-label="Page with Table of Contents"/>
+  <img style="padding: 1px;" src="images/toc.png" alt="Page with Table of Contents"/>
   <figcaption id="caption">Table of Contents</figcaption>
 </label>
 
 <label>
-  <input type="radio" name="pagestyle" id="stylesidebar" aria-label="Page with Docsify Sidebar (collapsible)">
-  <img style="padding: 1px;" src="images/sidebar.png" alt="Page with Docsify Sidebar (collapsible)">
+  <input type="radio" name="pagestyle" id="stylesidebar" aria-label="Page with Docsify Sidebar (collapsible)"/>
+  <img style="padding: 1px;" src="images/sidebar.png" alt="Page with Docsify Sidebar (collapsible)"/>
   <figcaption id="caption">Docsify Sidebar</figcaption>
 </label>
 
 </div>
 
-<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="editCheck" unchecked><label for="editCheck">Include 'Edit this Page' link with GitHub or Codeberg files (default location is bottom of page)</label></div>
+<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="editCheck"/><label for="editCheck">Include 'Edit this Page' link with GitHub or Codeberg files (default location is bottom of page)</label></div>
 
 <div id="docsifythisurlbuildershowhidelink"><a name='toggleDivlink' href='#' onclick='toggleDiv(this); return false;'>Show More Page Appearance Options &raquo;</a></div>
 
@@ -103,11 +98,13 @@ Page layout:
 
 <hr>
 
-<div class="docsifythisurlbuilderoptionsline">Title on Browser tab:<br><input style="border-radius: 7px;border-color: #8e8f9d" aria-label="Title on Browser tab" type="text" maxlength="60" value="Published by Docsify-This" id="browserTabTitle" name="browserTabTitle"></div>
+<div class="docsifythisurlbuilderoptionsline">Title on Browser tab:<br><input aria-label="Title on Browser tab" type="text" maxlength="60" value="Published by Docsify-This" id="browserTabTitle" name="browserTabTitle"/></div>
 
-<div class='stackedlabeldropdown'>
+<div class="pagefontsettings">
+
+<div class="stackedlabeldropdown">
  <label for="fontfamily">Page font family:</label>
- <select style="border-radius: 7px;border-color: #8e8f9d; display: inline-block; vertical-align: middle; margin-right: 4px;" class="docsifythisurlbuilderoptionsline" id="fontfamily" name="fontfamily">
+ <select style="display: inline-block; vertical-align: middle; margin-right: 4px;" class="docsifythisurlbuilderoptionsline" id="fontfamily" name="fontfamily">
    <option value="Source%20Sans%203,Helvetica%20Neue,sans-serif">Source Sans 3</option>
    <option disabled="disabled">----</option>
    <option value="Arial,sans-serif">Arial, sans-serif</option>
@@ -123,14 +120,12 @@ Page layout:
    <option value="Times%20New%20Roman,serif">Times New Roman, serif</option>
    <option value="Courier,monospace">Courier, monospace</option>
  </select>
- <span id="fontPreview" style="display: inline-block; vertical-align: middle; margin-top: 6px; margin-right: 6px; font-size: 1.2em; border: 1px dashed #ccc; padding: 2px 5px; background-color: var(--mono-tint3); color: var(--base-color); width: 118px; overflow: hidden; text-align: center;">
-   AaBb 123
- </span>
+ <span id="fontPreview" style="display: inline-block; vertical-align: middle; margin-right: 6px; font-size: 1.2em; border: 1px dashed #ccc; padding: 2px 5px; background-color: var(--mono-tint3); color: var(--base-color); width: 118px; box-sizing: border-box; overflow: hidden; text-align: center;">AaBb 123</span>
 </div>
 
-<div class='stackedlabeldropdown'>
+<div class="stackedlabeldropdown">
   <label for="fontsize">Font size:</label>
-  <select style="border-radius: 7px;border-color: #8e8f9d" class="docsifythisurlbuilderoptionsline" id="fontsize" name="fontsize">
+  <select class="docsifythisurlbuilderoptionsline" id="fontsize" name="fontsize">
     <option value="18px">18px</option>
     <option disabled="disabled">──</option>
     <option value="14px">14px</option>
@@ -142,9 +137,9 @@ Page layout:
   </select>
 </div>
 
-<div class='stackedlabeldropdown'>
+<div class="stackedlabeldropdown">
   <label for="lineheight">Line height:</label>
-  <select style="border-radius: 7px;border-color: #8e8f9d" class="docsifythisurlbuilderoptionsline" id="lineheight" name="lineheight" style="width: 60px;">
+  <select class="docsifythisurlbuilderoptionsline" id="lineheight" name="lineheight" style="width: 70px;">
     <option value="1.4">1.4</option>
     <option disabled="disabled">──</option>
     <option value="1.2">1.2</option>
@@ -154,13 +149,15 @@ Page layout:
   </select>
 </div>
 
-<div class="docsifythisurlbuilderoptionsline">Page link color:<br><input style="border-radius: 7px;border-color: #8e8f9d" aria-label="Page link color" type="text" maxlength="7" size="8" value="#0374B5" id="linkcolor" style="text-transform:uppercase" oninput="validateColorAndUpdatePreview('linkcolor', 'linkcolorpreview');" data-coloris><span id="linkcolorpreview"></span></div>
+</div>
+
+<div class="docsifythisurlbuilderoptionsline">Page link color:<br><input aria-label="Page link color" type="text" maxlength="7" size="8" value="#0374B5" id="linkcolor" style="text-transform:uppercase" oninput="validateColorAndUpdatePreview('linkcolor', 'linkcolorpreview');" data-coloris><span id="linkcolorpreview"></span></div>
 
 <div class="clearfix">
 
-<div class="docsifythisurlbuilderoptionsline"><div class='stackedlabeldropdown' style='margin-bottom:8px;border-radius: 7px;border-color: #8e8f9d'>
+<div class="docsifythisurlbuilderoptionsline"><div class="stackedlabeldropdown" style='margin-bottom:8px;'>
   <label for="headerweight">Page headers font weight:</label>
-  <select style="border-radius: 7px;border-color: #8e8f9d" class="docsifythisurlbuilderoptionsline" id="headerweight" name="headerweight">
+  <select class="docsifythisurlbuilderoptionsline" id="headerweight" name="headerweight">
     <option value="400">Normal (400)</option>
     <option disabled="disabled">──</option>
     <option value="600">Semi Bold (600)</option>
@@ -170,11 +167,11 @@ Page layout:
 
 </div>
 
-<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="imageCaptions" unchecked><label for="imageCaptions">Show alternative text of images as captions</label></div>
+<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="imageCaptions"/><label for="imageCaptions">Show alternative text of images as captions</label></div>
 
-<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="zoomimages" unchecked><label for="zoomimages">Enable zoomable page images (tapping on images to enlarge them)</label></div>
+<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="zoomimages"/><label for="zoomimages">Enable zoomable page images (tapping on images to enlarge them)</label></div>
 
-<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="hypothesisenable" unchecked><label for="hypothesisenable">Enable page annotation with Hypothes.is, an open source web annotation tool</label></div>
+<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="hypothesisenable"/><label for="hypothesisenable">Enable page annotation with Hypothes.is, an open source web annotation tool</label></div>
 
 <hr>
 
@@ -183,7 +180,7 @@ Page layout:
   <label for="docsifyV5coretheme">Use Docsify v5 core theme style defaults instead of Docsify-This styling
     <details class="docsifythiscustomdetails">
       <summary aria-label="More information about using Docsify v5 Core Theme">
-        <img src="https://raw.githubusercontent.com/paulhibbitts/test-docsify-this/refs/heads/test-docsify-this-v2/docs/images/Info.svg" alt="Info" width="16" height="16">
+        <img src="https://raw.githubusercontent.com/paulhibbitts/test-docsify-this/refs/heads/test-docsify-this-v2/docs/images/Info.svg" alt="Info" width="16" height="16"/>
         <span class="docsifythisinfolabel" id="docsifythisurlbuildercustomdetailslink">Learn more</span>
       </summary>
       <p>This applies the Docsify v5 core theme defaults, removing Docsify-This and Web Page Builder theme styling. To adjust the visual appearance after publishing manually add URL parameters, for example <code>&font-family=Merriweather,serif</code>, <code>&theme-color=CC0000</code>, <code>&link-color=CC0000</code>, or <code>&max-width=910px</code>.</p>
@@ -196,31 +193,33 @@ Page layout:
 <hr>
 
 <div class="docsifythisurlbuilderoptionsline" >Headings to include in table of contents (at least one required):</div>
-<div class="docsifythisurlbuilderoptionsindentedline"><input aria-label="Include h1 in table of contents" class="docsifythisurlbuildercheckbox" type="checkbox" id="toch1"  unchecked><label for="toch1">Heading 1 (h1)</label></div>
+<div class="docsifythisurlbuilderoptionsindentedline"><input aria-label="Include h1 in table of contents" class="docsifythisurlbuildercheckbox" type="checkbox" id="toch1" /><label for="toch1">Heading 1 (h1)</label></div>
 <div class="docsifythisurlbuilderoptionsindentedline"><input aria-label="Include h2 in table of contents" class="docsifythisurlbuildercheckbox" type="checkbox" id="toch2" checked><label for="toch2">Heading 2 (h2)</label></div>
-<div class="docsifythisurlbuilderoptionsindentedline"><input aria-label="Include h3 in table of contents" class="docsifythisurlbuildercheckbox" type="checkbox" id="toch3" unchecked><label for="toch3">Heading 3 (h3)</label></div>
+<div class="docsifythisurlbuilderoptionsindentedline"><input aria-label="Include h3 in table of contents" class="docsifythisurlbuildercheckbox" type="checkbox" id="toch3"/><label for="toch3">Heading 3 (h3)</label></div>
 
-<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="narrowToC" unchecked><label for="narrowToC">Use a narrower table of contents area, along with a smaller screen breakpoint</label></div>
+<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="narrowToC"/><label for="narrowToC">Use a narrower table of contents area, along with a smaller screen breakpoint</label></div>
 
 <hr>
 
-<div class="docsifythisurlbuilderoptionsline">Maximum Header level (1-6) of Docsify Sidebar:<br><input style="border-radius: 7px;border-color: #8e8f9d" aria-label="Maximum Header level (1-6) of Docsify Sidebar" type="number" size="1" value="2" min="1" max="6" id="maxLevel" name="maxLevel"></div>
+<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="enableSidebarsearch"/><label for="enableSidebarsearch">Enable search box in Docsify Sidebar</label></div>
+
+<div class="docsifythisurlbuilderoptionsline">Maximum Header level (1-6) of Docsify Sidebar:<br><input aria-label="Maximum Header level (1-6) of Docsify Sidebar" type="number" size="1" value="2" min="1" max="6" id="maxLevel" name="maxLevel"/></div>
 
 <h3>Additional Page Options</h3>
 
 <hr>
 
-<div class="docsifythisurlbuilderoptionsline">Text of 'Edit this Page' link:<br><input style="border-radius: 7px;border-color: #8e8f9d" aria-label="Text of 'Edit this Page' link" type="text" maxlength="60" value="Edit this Page" id="editLinkText" name="editLinkText"></div>
+<div class="docsifythisurlbuilderoptionsline">Text of 'Edit this Page' link:<br><input aria-label="Text of 'Edit this Page' link" type="text" maxlength="60" value="Edit this Page" id="editLinkText" name="editLinkText"/></div>
 
-<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="editLinkTopCheck" unchecked><label for="editLinkTopCheck">Set location of the 'Edit this Page' link to top of page</label></div>
+<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="editLinkTopCheck"/><label for="editLinkTopCheck">Set location of the 'Edit this Page' link to top of page</label></div>
 
 <hr>
 
-<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="hideCredits" unchecked><label for="hideCredits">Remove the Docsify-This credit text from bottom of page</label></div>
+<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="hideCredits"/><label for="hideCredits">Remove the Docsify-This credit text from bottom of page</label></div>
 
 <input class="docsifythisurlbuilderprimarybutton" style="border:none;margin-top: 10px;" type="button" id="btn_2" value="Publish as a Web Page" onclick="openURLs(document.getElementById('docsifythisurlfield').value)"/>
 
-<div class="docsifythisurlbuilderoptionsline toggle-wrapper" style="margin-top: 32px; margin-bottom: -27px;"><input class="toggle" type="checkbox" id="advancedwebpagebuilder" onclick="toggleDiv2(this)"><label for="advancedwebpagebuilder">Advanced Web Page Builder Options</label></div>
+<div class="docsifythisurlbuilderoptionsline toggle-wrapper" style="margin-top: 32px; margin-bottom: -27px;"><input class="toggle" type="checkbox" id="advancedwebpagebuilder" onclick="toggleDiv2(this)"/><label for="advancedwebpagebuilder">Advanced Web Page Builder Options</label></div>
 
 <div id="docsifythisurlbuilderoptionsDiv2" style='margin-top:40px;display: none'>
 
@@ -228,9 +227,9 @@ Page layout:
 
 <hr>
 
-<div class="docsifythisurlbuilderoptionsline"><div class='stackedlabeldropdown' style='margin-bottom:4px;border-radius: 7px;border-color: #8e8f9d'>
+<div class="docsifythisurlbuilderoptionsline"><div class="stackedlabeldropdown" style='margin-bottom:16px;'>
   <label for="enableDarkmode">Dark theme mode:</label>
-  <select style="border-radius: 7px;border-color: #8e8f9d" class="docsifythisurlbuilderoptionsline" id="enableDarkmode" name="enableDarkmode">
+  <select class="docsifythisurlbuilderoptionsline" id="enableDarkmode" name="enableDarkmode">
     <option value="false">Off</option>
     <option disabled="disabled">──</option>
     <option value="auto">Match System Setting</option>
@@ -238,9 +237,9 @@ Page layout:
   </select>
 </div></div>
 
-<div class="docsifythisurlbuilderoptionsline" style="margin-left: 10px;">Link color for dark theme:<br><input style="border-radius: 7px;border-color: #8e8f9d" aria-label="Page link color for dark theme" type="text" maxlength="7" size="8" value="#1BA1EE" id="linkcolordarkmode" style="text-transform:uppercase" oninput="validateColorAndUpdatePreview('linkcolordarkmode', 'linkcolordarkmodepreview');" data-coloris><span id="linkcolordarkmodepreview"></span></div>
+<div class="docsifythisurlbuilderoptionsline" style="margin-left: 10px;">Link color for dark theme:<br><input aria-label="Page link color for dark theme" type="text" maxlength="7" size="8" value="#1BA1EE" id="linkcolordarkmode" style="text-transform:uppercase" oninput="validateColorAndUpdatePreview('linkcolordarkmode', 'linkcolordarkmodepreview');" data-coloris/><span id="linkcolordarkmodepreview"></span></div>
 
-<div class="docsifythisurlbuilderoptionsline" style="margin-left: 10px;">Link hover color for dark theme:<br><input style="border-radius: 7px;border-color: #8e8f9d" aria-label="Page link hover color for dark theme" type="text" maxlength="7" size="8" value="" id="linkhovercolordarkmode" style="text-transform:uppercase" oninput="validateColorAndUpdatePreview('linkhovercolordarkmode', 'linkhovercolordarkmodepreview');" data-coloris><span id="linkhovercolordarkmodepreview"></span></div>
+<div class="docsifythisurlbuilderoptionsline" style="margin-left: 10px;">Link hover color for dark theme:<br><input aria-label="Page link hover color for dark theme" type="text" maxlength="7" size="8" value="" id="linkhovercolordarkmode" style="text-transform:uppercase" oninput="validateColorAndUpdatePreview('linkhovercolordarkmode', 'linkhovercolordarkmodepreview');" data-coloris/><span id="linkhovercolordarkmodepreview"></span></div>
 
 <h3>Link Style and Behavior</h3>
 
@@ -248,9 +247,9 @@ Page layout:
 
 <div class="clearfix">
 
-<div class='stackedlabeldropdown'>
+<div class="stackedlabeldropdown">
   <label for="linktextdecoration">Link text decoration:</label>
-  <select style="border-radius: 7px;border-color: #8e8f9d" class="docsifythisurlbuilderoptionsline" id="linktextdecoration" name="linktextdecoration" style="width: 60px;">
+  <select class="docsifythisurlbuilderoptionsline" id="linktextdecoration" name="linktextdecoration" style="width: 120px;">
     <option value="underline">Underline</option>
     <option disabled="disabled">──</option>
     <option value="none">None</option>
@@ -260,27 +259,26 @@ Page layout:
 
 <div class="clearfix">
 
-  <div class='stackedlabeldropdown'><div class="docsifythisurlbuilderoptionsline" style='margin-top:-2px;'>Link hover color:<br><input style="border-radius: 7px;border-color: #8e8f9d" aria-label="Link hover color" type="text" maxlength="7" size="8" value="" id="linkhovercolor" style="text-transform:uppercase" oninput="validateColorAndUpdatePreview('linkhovercolor', 'linkhovercolorpreview');" data-coloris><span id="linkhovercolorpreview"></span></div></div>
+  <div class="stackedlabeldropdown"><div class="docsifythisurlbuilderoptionsline" style="vertical-align: middle;"><label for="linkhovertextdecoration">Link hover color:</label><input aria-label="Link hover color" type="text" maxlength="7" size="8" value="" id="linkhovercolor" style="text-transform:uppercase" oninput="validateColorAndUpdatePreview('linkhovercolor', 'linkhovercolorpreview');" data-coloris/><span id="linkhovercolorpreview"></span></div></div>
 
-  <div class='stackedlabeldropdown' style="margin-top:-6px;">
-  <label for="linkhovertextdecoration">Link hover text decoration:</label>
-  <select style="border-radius: 7px;border-color: #8e8f9d" class="docsifythisurlbuilderoptionsline" id="linkhovertextdecoration" name="linkhovertextdecoration" style="width: 60px;">
+  <div class="stackedlabeldropdown"><div class="docsifythisurlbuilderoptionsline" style="vertical-align: middle;"><label for="linkhovertextdecoration">Link hover text decoration:</label>
+  <select class="docsifythisurlbuilderoptionsline" id="linkhovertextdecoration" name="linkhovertextdecoration" style="width: 120px;">
     <option value="none">None</option>
     <option disabled="disabled">──</option>
     <option value="underline">Underline</option>
-  </select></div>
+  </select></div></div>
 
 </div>
 
 <div class="clearfix">
 
-<div class='stackedlabeldropdown' style="margin-top:-11px;">
+<div class="stackedlabeldropdown"><div class="docsifythisurlbuilderoptionsline" style="vertical-align: middle;">
 <label for="externalLinkTarget">External link target:</label>
-<select style="border-radius: 7px;border-color: #8e8f9d" class="docsifythisurlbuilderoptionsline" id="externalLinkTarget" name="externalLinkTarget" style="width: 60px;">
+<select class="docsifythisurlbuilderoptionsline" id="externalLinkTarget" name="externalLinkTarget" style="width: 210px;">
   <option value="_top">Same window or tab</option>
   <option disabled="disabled">──</option>
   <option value="_blank">New window or tab</option>
-</select></div>
+</select></div></div>
 
 </div>
 
@@ -288,46 +286,44 @@ Page layout:
 
 <hr>
 
-<div class="docsifythisurlbuilderoptionsline">Title added to the top of page as H1 level header:<br><input style="border-radius: 7px;border-color: #8e8f9d" aria-label="Title added to the top of page as H1 level header" type="text" maxlength="80" value="" id="pageTitle" name="pageTitle"></div>
+<div class="docsifythisurlbuilderoptionsline">Title added to the top of page as H1 level header:<br><input aria-label="Title added to the top of page as H1 level header" type="text" maxlength="80" value="" id="pageTitle" name="pageTitle"/></div>
 
 <h3>Docsify Custom Files</h3>
 
 <hr>
 
 <div class="docsifythisurlbuilderoptionsline">Load and display additional <a href="https://docsify.js.org/#/more-pages" target="_blank">Docsify</a> custom files (must be located at root level of remote files):</div>
-<div class="docsifythisurlbuilderoptionsindentedline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="loadcustomsidebar"  unchecked><label for="loadcustomsidebar">Sidebar (<code>_sidebar.md</code>)</label></div>
-<div class="docsifythisurlbuilderoptionsindentedline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="loadcustomnavbar" unchecked><label for="loadcustomnavbar">Navbar (<code>_navbar.md</code>)</label></div>
-<div class="docsifythisurlbuilderoptionsindentedline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="loadcoverpage" unchecked><label for="loadcoverpage">Coverpage (<code>_coverpage.md</code>)</label></div>
-<div class="docsifythisurlbuilderoptionsindentedline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="loadfavicon"  unchecked><label for="loadfavicon">Favicon (<code>favicon.png</code>)</label></div>
-<div class="docsifythisurlbuilderoptionsindentedline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="loadcustomfooter" unchecked><label for="loadcustomfooter">Footer (<code>_footer.md</code>)</label></div>
+<div class="docsifythisurlbuilderoptionsindentedline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="loadcustomsidebar"><label for="loadcustomsidebar">Sidebar (<code>_sidebar.md</code>)</label></div>
+<div class="docsifythisurlbuilderoptionsindentedline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="loadcustomnavbar"><label for="loadcustomnavbar">Navbar (<code>_navbar.md</code>)</label></div>
+<div class="docsifythisurlbuilderoptionsindentedline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="loadcoverpage"><label for="loadcoverpage">Coverpage (<code>_coverpage.md</code>)</label></div>
+<div class="docsifythisurlbuilderoptionsindentedline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="loadfavicon"><label for="loadfavicon">Favicon (<code>favicon.png</code>)</label></div>
+<div class="docsifythisurlbuilderoptionsindentedline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="loadcustomfooter"><label for="loadcustomfooter">Footer (<code>_footer.md</code>)</label></div>
 
 <h3>Docsify Custom Sidebar Options</h3>
 
 <hr>
 
-<div class="docsifythisurlbuilderoptionsline">Website name displayed in Sidebar:<br><input style="border-radius: 7px;border-color: #8e8f9d" aria-label="Website name displayed in Sidebar" type="text" maxlength="80" value="" id="siteName" name="siteName"></div>
+<div class="docsifythisurlbuilderoptionsline">Website name displayed in Sidebar:<br><input aria-label="Website name displayed in Sidebar" type="text" maxlength="80" value="" id="siteName" name="siteName"/></div>
 
-<div class="docsifythisurlbuilderoptionsline">Website logo displayed in Sidebar (folder path and image filename):<br><input style="border-radius: 7px;border-color: #8e8f9d" aria-label="Website logo displayed in Sidebar" type="text" maxlength="80" value="" id="siteLogo" name="siteLogo"></div>
+<div class="docsifythisurlbuilderoptionsline">Website logo displayed in Sidebar (folder path and image filename):<br><input aria-label="Website logo displayed in Sidebar" type="text" maxlength="80" value="" id="siteLogo" name="siteLogo"/></div>
 
-<div class="docsifythisurlbuilderoptionsline">Maximum header level of Sidebar automatic table of contents (0 for none):<br><input style="border-radius: 7px;border-color: #8e8f9d" aria-label="Maximum header level of Sidebar automatic table of contents (0 for none)" type="number" size="1" value="2" min="0" max="6" id="subMaxLevel" name="subMaxLevel"></div>
+<div class="docsifythisurlbuilderoptionsline">Maximum header level of Sidebar automatic table of contents (0 for none):<br><input aria-label="Maximum header level of Sidebar automatic table of contents (0 for none)" type="number" size="1" value="2" min="0" max="6" id="subMaxLevel" name="subMaxLevel"/></div>
 
-<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="enableSidebarsearch" unchecked><label for="enableSidebarsearch">Enable search box in Sidebar</label></div>
-
-<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="pagination" unchecked><label for="pagination">Enable pagination buttons in page content area (Docsify custom Sidebar required)  </label></div>
+<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="pagination"/><label for="pagination">Enable pagination buttons in page content area (Docsify custom Sidebar required)</label></div>
 
 <h3>Docsify Custom Navbar Options</h3>
 
 <hr>
 
-<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="mergeNavbar" unchecked><label for="mergeNavbar">Move Navbar items to the top of the Sidebar on smaller screens</label></div>
+<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="mergeNavbar"/><label for="mergeNavbar">Move Navbar items to the top of the Sidebar on smaller screens</label></div>
 
 <h3>Docsify Custom Coverpage Colors</h3>
 
 <hr>
 
-<div class="docsifythisurlbuilderoptionsline">Coverpage color:<br><input style="border-radius: 7px;border-color: #8e8f9d" aria-label="Coverpage color" type="text" maxlength="7" size="8" value="#C1E1F6" id="coverpagecolor" style="text-transform:uppercase" oninput="validateColorAndUpdatePreview('coverpagecolor', 'coverpagecolorpreview');" data-coloris><span id="coverpagecolorpreview"></span></div>
+<div class="docsifythisurlbuilderoptionsline">Coverpage color:<br><input aria-label="Coverpage color" type="text" maxlength="7" size="8" value="#C1E1F6" id="coverpagecolor" style="text-transform:uppercase" oninput="validateColorAndUpdatePreview('coverpagecolor', 'coverpagecolorpreview');" data-coloris/><span id="coverpagecolorpreview"></span></div>
 
-<div class="docsifythisurlbuilderoptionsline">Coverpage color for dark theme:<br><input style="border-radius: 7px;border-color: #8e8f9d" aria-label="Coverpage color for dark theme" type="text" maxlength="7" size="8" value="#20587D" id="coverpagecolordarkmode" style="text-transform:uppercase" oninput="validateColorAndUpdatePreview('coverpagecolordarkmode', 'coverpagecolordarkmodepreview');" data-coloris><span id="coverpagecolordarkmodepreview"></span></div>
+<div class="docsifythisurlbuilderoptionsline">Coverpage color for dark theme:<br><input aria-label="Coverpage color for dark theme" type="text" maxlength="7" size="8" value="#20587D" id="coverpagecolordarkmode" style="text-transform:uppercase" oninput="validateColorAndUpdatePreview('coverpagecolordarkmode', 'coverpagecolordarkmodepreview');" data-coloris/><span id="coverpagecolordarkmodepreview"></span></div>
 
 <input class="docsifythisurlbuilderprimarybutton" style="border:none;margin-top: 10px;margin-bottom: 8px;" type="button" id="btn_3" value="Publish as a Web Page" onclick="openURLs(document.getElementById('docsifythisurlfield').value)"/>
 
@@ -364,6 +360,7 @@ https://github.com/hibbitts-design/markdown/blob/main/ReadMe.md
 
 - [What Problem Does Docsify-This Solve?](/?id=what-problem-does-docsify-this-solve)
 - [Docsify-This Core Design Principles](/?id=docsify-this-core-design-principles)
+- [When is Docsify-This a Good Candidate?](/?id=when-is-docsify-this-a-good-candidate)
 - [How Docsify-This Works](/?id=how-docsify-this-works)
 - [Read What People are Saying about Docsify-This](/?id=read-what-people-are-saying-about-docsify-this)
 
@@ -383,11 +380,11 @@ https://github.com/hibbitts-design/markdown/blob/main/ReadMe.md
 - [Custom Markdown CSS Classes](/?id=custom-markdown-css-classes)
 - [Looking for Even More Customization and Control?](/?id=looking-for-even-more-customization-and-control)
 
-### [4. Resources and Additional Templates](/?id=_4-resources-and-additional-templates-1)
+### [4. Reference Materials and Project Resources](/?id=_4-reference-materials-and-project-resources-1)
 
 - [Markdown Syntax References](/?id=markdown-syntax-references)
 - [Font Awesome Icons](/?id=font-awesome-icons)
-- [Additional Docsify-This Markdown Files](/?id=additional-docsify-this-markdown-files)
+- [Additional Docsify-This Examples and Templates](/?id=additional-docsify-this-examples-and-templates)
 - [Additional Docsify-This Learning Materials](/?id=additional-docsify-this-learning-materials)
 
 ### [5. Tips, Techniques, and Troubleshooting](/?id=_5-tips-techniques-and-troubleshooting-1)
@@ -417,6 +414,7 @@ What do you think about Docsify-This so far? Help shape its direction by sharing
 
 - [What Problem Does Docsify-This Solve?](#what-problem-does-docsify-this-solve)
 - [Docsify-This Core Design Principles](#docsify-this-core-design-principles)
+- [When is Docsify-This a Good Candidate?](#when-is-docsify-this-a-good-candidate)
 - [How Docsify-This Works](#how-docsify-this-works)
 - [Read What People are Saying about Docsify-This](#read-what-people-are-saying-about-docsify-this)
 
@@ -442,10 +440,33 @@ With Docsify-This you can:
 
 - Zero Maintenance Publishing
 - Separation of Content and Presentation 
-- Platform independence over vendor lock-in
+- Platform independence and choice
 - Your content, your control
 - Support the 5 Rs of OER
 - Authors helping other authors
+
+---
+
+### When is Docsify-This a Good Candidate?
+
+#### Docsify-This often works really well when you:
+- Want to embed the same content across multiple platforms (LMS, websites, etc.)
+- Need cross-platform content reuse (same content for web, mobile, PDF and eBook generation)
+- Want to publish open content quickly without technical setup
+- Prefer minimal maintenance publishing (set it and forget it, no Webserver needed)
+- Value simple, portable Markdown files with platform independence
+- Are interested in using GitHub/Codeberg for version-control and collaboration
+- Are creating educational materials, documentation, or research content
+
+#### Other publishing tools might be better candidates when you:
+- Require SEO optimization and search engine discoverability
+- Need complex user management, approval workflows, or interactive features (contact forms, newsletters, user accounts)
+- Want rich media features (e-commerce, forums, booking systems) or extensive visual customization
+- Have multiple content types requiring different layouts (events, products, news, etc.)
+- Are building large, complex websites with hundreds of pages
+- Prefer visual page builders over Markdown editing
+
+**Still unsure?** Docsify-This is designed for easy entry _and_ exit - try it with your content risk-free. Your Markdown files can be used by other tools if your needs change. For more powerful Markdown file-based publishing with hosting capabilities, explore the open-source [Grav CMS](https://getgrav.org/) project.
 
 ---
 
@@ -471,7 +492,7 @@ The appearance of rendered Markdown files can be customized by optional [URL par
 
 Share-This.net is also available as an alias domain for non Docsify-This branded URLs, for example https://share-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-one-page-article/main&homepage=home.md.
 
-Looking for an overall introduction to publishing with Docsify-This? Check out [Markdown Publishing with Docsify-This](https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/publishing-with-docsify-this/main&sidebar=true&edit-link=https://github.com/hibbitts-design/publishing-with-docsify-this/blob/main/README.md&maxLevel=4&title=Markdown%20Publishing%20with%20Docsify-This).
+Looking for an overall introduction to publishing with Docsify-This? Check out [Markdown Publishing with Docsify-This](https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/publishing-with-docsify-this/main&sidebar=true&edit-link=https://github.com/hibbitts-design/publishing-with-docsify-this/blob/main/README.md&maxLevel=3&title=Markdown%20Publishing%20with%20Docsify-This).
 
 Docsify-This uses client-side rendering, which means your content will not be indexed by search engines like Google, Bing, or DuckDuckGo.
 
@@ -524,7 +545,7 @@ For example, to display the Markdown file located at https://raw.githubuserconte
 
 And here’s how Docsify-This.net displays the same URL:
 
-<img src="https://raw.githubusercontent.com/paulhibbitts/test-docsify-this/test-docsify-this-v2/docs/images/docsify-this-example-page.jpg" width="1152" height="819" class="responsive image-border-rounded" alt="Example Docsify-This URL displayed by Docsify-This"><br>
+<img src="https://raw.githubusercontent.com/paulhibbitts/test-docsify-this/test-docsify-this-v2/docs/images/docsify-this-example-page.jpg" width="1152" height="819" class="responsive image-border-rounded" alt="Example Docsify-This URL displayed by Docsify-This"/><br>
 <em>The web page displayed by Docsify-This.net, showing the Markdown file with a sidebar that includes headings up to 3 levels, as specified by the Docsify-This URL.</em>
 
 #### Page Appearance URL Parameters (Basic)
@@ -547,6 +568,7 @@ Learn more about each of the basic Docsify-This URL parameters below, and discov
 - [line-height](/?id=line-heightconst-bthisconst-origbtextcontentbtextcontentcopiedsettimeoutbtextcontentorig1500copy)
 - [link-color](/?id=link-colorconst-bthisconst-origbtextcontentbtextcontentcopiedsettimeoutbtextcontentorig1500copy)
 - [maxLevel](/?id=maxLevelconst-bthisconst-origbtextcontentbtextcontentcopiedsettimeoutbtextcontentorig1500copy)
+- [searchbox](/?id=searchboxconst-bthisconst-origbtextcontentbtextcontentcopiedsettimeoutbtextcontentorig1500copy)
 - [sidebar](/?id=sidebarconst-bthisconst-origbtextcontentbtextcontentcopiedsettimeoutbtextcontentorig1500copy)
 - [toc](/?id=tocconst-bthisconst-origbtextcontentbtextcontentcopiedsettimeoutbtextcontentorig1500copy)
 - [toc-headings](/?id=toc-headingsconst-bthisconst-origbtextcontentbtextcontentcopiedsettimeoutbtextcontentorig1500copy)
@@ -623,6 +645,11 @@ https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/h
 Set the maximum header level of the Docsify sidebar with the optional **maxLevel** Docsify parameter, for example:  
 https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-open-publishing-starter-kit/main/docs&homepage=introduction.md&sidebar=true&maxLevel=3
 
+##### searchbox<button type="button" class="copy-link" aria-label="Copy searchbox parameter" onclick="event.stopPropagation(); event.preventDefault(); navigator.clipboard.writeText('&searchbox=true').then(()=>{const b=this;const orig=b.textContent;b.textContent='copied!';setTimeout(()=>b.textContent=orig,1500)})">copy</button>
+
+Enable the Docsify Search plugin (which currently includes matches for text and markup) on multiple page sites including a Sidebar with the optional **searchbox** Docsify parameter, for example:  
+https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-multiple-page-course-site/main&homepage=home.md&sidebar=true&loadSidebar=_sidebar.md&loadNavbar=_navbar.md&searchbox=true
+
 ##### sidebar<button type="button" class="copy-link" aria-label="Copy sidebar parameter" onclick="event.stopPropagation(); event.preventDefault(); navigator.clipboard.writeText('&sidebar=false').then(()=>{const b=this;const orig=b.textContent;b.textContent='copied!';setTimeout(()=>b.textContent=orig,1500)})">copy</button>
 
 Display a Docsify sidebar with the optional **sidebar** parameter, for example:  
@@ -678,7 +705,6 @@ The following additional URL parameters are available for use in Docsify-This UR
 - [name](/?id=nameconst-bthisconst-origbtextcontentbtextcontentcopiedsettimeoutbtextcontentorig1500copy)
 - [page-title](/?id=page-titleconst-bthisconst-origbtextcontentbtextcontentcopiedsettimeoutbtextcontentorig1500copy)
 - [pagination](/?id=paginationconst-bthisconst-origbtextcontentbtextcontentcopiedsettimeoutbtextcontentorig1500copy)
-- [searchbox](/?id=searchboxconst-bthisconst-origbtextcontentbtextcontentcopiedsettimeoutbtextcontentorig1500copy)
 - [subMaxLevel](/?id=subMaxLevelconst-bthisconst-origbtextcontentbtextcontentcopiedsettimeoutbtextcontentorig1500copy)
 - [svg-icons](/?id=svg-iconsconst-bthisconst-origbtextcontentbtextcontentcopiedsettimeoutbtextcontentorig1500copy)
 - [theme-color](/?id=theme-colorconst-bthisconst-origbtextcontentbtextcontentcopiedsettimeoutbtextcontentorig1500copy)
@@ -787,8 +813,8 @@ https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/h
 
 ##### max-width<button type="button" class="copy-link" aria-label="Copy max-width parameter" onclick="event.stopPropagation(); event.preventDefault(); navigator.clipboard.writeText('&max-width=').then(()=>{const b=this;const orig=b.textContent;b.textContent='copied!';setTimeout(()=>b.textContent=orig,1500)})">copy</button>
 
-Set a custom max width for content in pixels of your web pages with the optional **max-width** parameter (not included in the Advanced Web Page Builder), for example:  
-https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-one-page-article/main&homepage=home.md&core-theme-styles=true&max-width=910px. This parameter can be particularly valuable when using the core Docsify v5 theme via `core-theme-styles` and embedding the resulting page.
+Set a custom max width for content of your web pages with the optional **max-width** parameter (not included in the Advanced Web Page Builder), for example:  
+https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-one-page-article/main&homepage=home.md&core-theme-styles=true&max-width=100. If no unit is included the default unit is percentage (%). You can also specify other units like max-width=910px."
 
 ##### mergeNavbar<button type="button" class="copy-link" aria-label="Copy mergeNavbar parameter" onclick="event.stopPropagation(); event.preventDefault(); navigator.clipboard.writeText('&mergeNavbar=true').then(()=>{const b=this;const orig=b.textContent;b.textContent='copied!';setTimeout(()=>b.textContent=orig,1500)})">copy</button>
 
@@ -809,11 +835,6 @@ https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/h
 
 Display Pagination buttons in page content area (Docsify custom Sidebar required) with the optional **pagination** parameter, for example:  
 https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-multiple-page-course-site/main&homepage=home.md&sidebar=true&loadSidebar=_sidebar.md&loadNavbar=_navbar.md&searchbox=true&pagination=true
-
-##### searchbox<button type="button" class="copy-link" aria-label="Copy searchbox parameter" onclick="event.stopPropagation(); event.preventDefault(); navigator.clipboard.writeText('&searchbox=true').then(()=>{const b=this;const orig=b.textContent;b.textContent='copied!';setTimeout(()=>b.textContent=orig,1500)})">copy</button>
-
-Enable the Docsify Search plugin (which currently includes matches for text and markup) on multiple page sites including a custom Sidebar with the optional **searchbox** Docsify parameter, for example:  
-https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-multiple-page-course-site/main&homepage=home.md&sidebar=true&loadSidebar=_sidebar.md&loadNavbar=_navbar.md&searchbox=true
 
 ##### subMaxLevel<button type="button" class="copy-link" aria-label="Copy subMaxLevel parameter" onclick="event.stopPropagation(); event.preventDefault(); navigator.clipboard.writeText('&subMaxLevel=').then(()=>{const b=this;const orig=b.textContent;b.textContent='copied!';setTimeout(()=>b.textContent=orig,1500)})">copy</button>
 
@@ -844,6 +865,35 @@ https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/h
 
 #### Embedding Docsify-This Pages into Other Platforms
 
+A [fully responsive Docsify-This page can be embedded into an iFrame](https://demo.hibbittsdesign.org/embedded-docsify-this-iframe/).
+
+_In general, paste the below HTML into your HTML editor and then replace the default `basepath` and `homepage` value with your own. For WordPress users: Add the code below to a Custom HTML block._
+
+For basic embedding with a fixed height to seamlessly integrate with other destination page content:
+
+```html
+<div style="width: 100%; margin: 0; padding: 0; overflow: hidden;">
+  <iframe src="https://docsify-this.net/?basePath=https://raw.githubusercontent.com/paulhibbitts/github-demo-markdown-file/main&homepage=README.md&max-width=100&hide-credits=true" 
+    style="width: 100%; height: 2700px; border: none; display: block;"
+    scrolling="no"
+    frameborder="0">
+  </iframe>
+</div>
+```
+
+_Adjust the `height` value (2700px) to match your content length. Test on different devices to ensure all content is visible._
+
+To avoid having to determine and set an appropriate height for the iframe, a scrollbar can be included:
+
+```html
+<div style="width: 100%; height: 80vh; margin: 0; padding: 0; overflow: hidden; border: 1px solid #e5e7eb; border-radius: 8px;">
+    <iframe src="https://docsify-this.net/?basePath=https://raw.githubusercontent.com/paulhibbitts/github-demo-markdown-file/main&homepage=README.md&hide-credits=true" 
+      style="width: 100%; height: 100%; border: none; display: block;"
+      frameborder="0">
+    </iframe>
+</div>
+```
+
 ##### Canvas LMS
 
 [Embed content in Canvas](https://www.howtocanvas.com/create-amazing-pages-in-canvas/embedding-content)  
@@ -851,16 +901,16 @@ iFrame code example, including URL parameters to seamlessly match Docsify-This c
 
 ```html
 <p>
-  <iframe
-    style="overflow: hidden; border: 0px #ffffff none; background: #ffffff;"
+  <iframe style="overflow: hidden; border: 0px #ffffff none; background: #ffffff;"
     src="https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/paulhibbitts/cmpt-363-222-pages/main&homepage=home.md&font-family=Lato%20Extended,Lato,Helvetica%20Neue,Helvetica,Arial,sans-serif&font-size=16px&hide-credits=true"
-    width="800px"
-    height="1400px"
-    allowfullscreen="allowfullscreen"></iframe>
+      width="800px"
+      height="1400px"
+      allowfullscreen="allowfullscreen">
+  </iframe>
 </p>
 ```
 
-If a scroll bar is present, you may want to re-edit your iFrame code and adjust the "height" value.
+_If a scrollbar is present and not desired, you may want to re-edit your iFrame code and adjust the `height` value._
 
 [How do I add an external URL as a module item?](https://community.canvaslms.com/t5/Instructor-Guide/How-do-I-add-an-external-URL-as-a-module-item/ta-p/967)  
 Module external link example, with Page Table of Contents:
@@ -1802,11 +1852,11 @@ Looking for some help with getting a Docsify custom-This instance up and running
 
 ---
 
-### 4. Resources and Additional Templates
+### 4. Reference Materials and Project Resources
 
 - [Markdown Syntax References](/?id=markdown-syntax-references)
 - [Font Awesome Icons](/?id=font-awesome-icons)
-- [Additional Docsify-This Markdown Files](/?id=additional-docsify-this-markdown-files)
+- [Additional Docsify-This Examples and Templates](/?id=additional-docsify-this-examples-and-templates)
 - [Additional Docsify-This Learning Materials](/?id=additional-docsify-this-learning-materials)
 
 ---
@@ -1836,46 +1886,59 @@ The following style prefixes are available with Docsify-This:
 
 ---
 
-#### Additional Docsify-This Markdown Files
+#### Additional Docsify-This Examples and Templates
 
 - [Examples](/?id=examples)
 - [Templates](/?id=templates)
 
 ##### Examples
 
+**Educational/Academic Content**
+
+_GitHub Training Manual Working Locally with Git_  
 [GitHub Training Manual Working Locally with Git Markdown file](https://github.com/githubtraining/training-manual/blob/main/docs/06_working_locally.md), displayed by Docsify-This as a:
 
 - [Web Page](https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/githubtraining/training-manual/main/docs&homepage=06_working_locally.md "GitHub Training Manual Working Locally with Git - Web Page")
 - [Web Page with Table of Contents](https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/githubtraining/training-manual/main/docs&homepage=06_working_locally.md&toc=true&toc-headings=h2,h3 "GitHub Training Manual Working Locally with Git - Web Page with Table of Contents")
 - [Web Page with Docsify Sidebar](https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/githubtraining/training-manual/main/docs&homepage=06_working_locally.md&sidebar=true&maxLevel=3 "GitHub Training Manual Working Locally with Git - Web Page with Docsify Sidebar")
 
+_SFU CMPT-363 Course Content_  
+[A Collection of GitHub Markdown files](https://github.com/paulhibbitts/cmpt-363-222-pages) used as course content [within an SFU CMPT-363 Canvas LMS site](https://canvas.sfu.ca/courses/69678).
+
+[A Collection of GitHub Markdown files with inline CSS](https://github.com/paulhibbitts/docsify-this-cmpt-363-222-site) used as a [multiple page SFU CMPT-363 course site with SFU visual branding and the Docsify Search plugin enabled](https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/paulhibbitts/docsify-this-cmpt-363-222-site/main&homepage=home.md&loadNavbar=_navbar.md&sidebar=true&loadSidebar=_sidebar.md&loadFavicon=favicon.png&dark-mode=auto&name=CMPT-363-222&searchbox=true#/course-welcome), [multiple page SFU CMPT-363 course site with SFU visual branding and website logo](https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/paulhibbitts/docsify-this-cmpt-363-222-site/main&homepage=home.md&loadNavbar=_navbar.md&sidebar=true&loadSidebar=_sidebar.md&loadFavicon=favicon.png&dark-mode=auto&name=CMPT-363-222&logo=images/logo.png#/course-welcome), an example [single Markdown file for embeddeding styled via URL parameters](https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/paulhibbitts/docsify-this-cmpt-363-222-site/main&homepage=home.md&link-color=CC0633&link-text-decoration=none&link-text-decoration-hover=underline&hide-credits=true#/course-welcome) and an example [single Markdown file with for embeddeding into Canvas styled via URL parameters](https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/paulhibbitts/docsify-this-cmpt-363-222-site/main&homepage=home.md&font-family=Lato%20Extended,Lato,Helvetica%20Neue,Helvetica,Arial,sans-serif&font-size=16px&hide-credits=true#/course-welcome).
+
+_OpenLab Project Documentation_  
+[A Collection of GitHub Markdown files](https://github.com/davidmalawey/openLab/tree/main) for the [OpenLab Project site](https://docsify-this.net/?basePath=https://raw.githubusercontent.com/davidmalawey/openLab/main&homepage=home.md&edit-link=https://github.com/davidmalawey/openLab/blob/main&sidebar=true&browser-tab-title=OpenLab_Project&edit-link-top=true&hide-credits=true&loadFavicon=favicon.png&loadSidebar=_sidebar.md&loadNavbar=_navbar.md&name=OpenLab_Project&searchbox=true&page-title=OpenLab&mergeNavbar=true&zoom-images=true&dark-mode=true), where documentation about building robotics prototypes at the Texas A&M University is shared.
+
+**General Documentation & Websites**  
+
+_Easy Markdown to Github Pages_  
 [Easy Markdown to Github Pages linked set of Markdown files](https://github.com/nicolas-van/easy-markdown-to-github-pages), displayed by Docsify-This as:
 
 - [Website](https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/nicolas-van/easy-markdown-to-github-pages/master&homepage=README.md "Easy Markdown to Github Pages - Web Page")
 - [Website with Table of Contents and an 'Edit this Page' link](https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/nicolas-van/easy-markdown-to-github-pages/master&homepage=README.md&toc=true&edit-link=https://github.com/nicolas-van/easy-markdown-to-github-pages/blob/master/README.md "Easy Markdown to Github Pages - Web Page with Table of Contents")
 - [Website with Docsify Sidebar and an 'Edit this Page' link](https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/nicolas-van/easy-markdown-to-github-pages/master&homepage=README.md&sidebar=true&edit-link=https://github.com/nicolas-van/easy-markdown-to-github-pages/blob/master/README.md "Easy Markdown to Github Pages - Web Page with Docsify Sidebar")
 
-[A Collection of GitHub Markdown files](https://github.com/paulhibbitts/cmpt-363-222-pages) used as course content [within an SFU CMPT-363 Canvas LMS site](https://canvas.sfu.ca/courses/69678).
-
-[A Collection of GitHub Markdown files with inline CSS](https://github.com/paulhibbitts/docsify-this-cmpt-363-222-site) used as a [multiple page SFU CMPT-363 course site with SFU visual branding and the Docsify Search plugin enabled](https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/paulhibbitts/docsify-this-cmpt-363-222-site/main&homepage=home.md&loadNavbar=_navbar.md&sidebar=true&loadSidebar=_sidebar.md&loadFavicon=favicon.png&dark-mode=auto&name=CMPT-363-222&searchbox=true#/course-welcome), [multiple page SFU CMPT-363 course site with SFU visual branding and website logo](https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/paulhibbitts/docsify-this-cmpt-363-222-site/main&homepage=home.md&loadNavbar=_navbar.md&sidebar=true&loadSidebar=_sidebar.md&loadFavicon=favicon.png&dark-mode=auto&name=CMPT-363-222&logo=images/logo.png#/course-welcome), and an example [single Markdown file with default visual styling for embeddeding](https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/paulhibbitts/docsify-this-cmpt-363-222-site/main&homepage=home.md&hide-credits=true#/course-welcome).
-
+_Markdown Content Demos_  
 [GitHub Markdown Content Demo file](https://github.com/hibbitts-design/docsify-this-markdown-content-demo/blob/main/README.md), displayed by Docsify-This as a [Web Page with 'Edit this Page' link](https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-markdown-content-demo/main&homepage=README.md&edit-link=https://github.dev/hibbitts-design/docsify-this-markdown-content-demo/blob/main/README.md) using the new [GitHub.dev web editor](https://docs.github.com/en/codespaces/the-githubdev-web-based-editor) (currently in Beta).
 
 [GitHub Markdown Content Demo file](https://github.com/hibbitts-design/docsify-this-markdown-content-demo/blob/main/README.md), displayed by Docsify-This as a [Web Page with 'View raw Markdown' link](https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-markdown-content-demo/main&edit-link=https://raw.githubusercontent.com/hibbitts-design/docsify-this-markdown-content-demo/main/README.md&edit-link-text=View%20raw%20Markdown).
 
 [Codeberg Markdown Content Demo file](https://codeberg.org/paulhibbitts/docsify-this-markdown-content-demo/src/branch/main/README.md), displayed by Docsify-This as a [Web Page with 'View raw Markdown' link](https://preview-v2.docsify-this.net?basePath=https://raw.codeberg.page/paulhibbitts/docsify-this-markdown-content-demo/&edit-link=https://codeberg.org/paulhibbitts/docsify-this-markdown-content-demo/raw/branch/main/README.md&edit-link-text=View%20raw%20Markdown).
 
+**Technical/Specialized Content**  
+
+_LaTeX Support Examples_  
 [GitHub's LaTeX Support Examples Markdown file](https://github.com/dotcom-poland/medium-latex-support/blob/main/README.md), displayed by Docsify-This as a [Web Page with an 'Edit this Page' link](https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/dotcom-poland/medium-latex-support/main&edit-link=https://github.com/dotcom-poland/medium-latex-support/blob/main/README.md#/).
 
+_Mermaid Diagram Examples_  
 [Mermaid-Docsify Example GitHub Markdown file](https://github.com/Leward/mermaid-docsify/blob/master/example/README.md), displayed by Docsify-This as a [Web Page with an 'Edit this Page' link](https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/Leward/mermaid-docsify/master/example&edit-link=https://github.com/Leward/mermaid-docsify/blob/master/example/README.md#/).
 
 ##### Templates
 
-[Docsify-This Multi-language Site Template](https://github.com/hibbitts-design/docsify-this-multilanguage-site), displayed by Docsify-This as a:
+**Portfolio Templates**  
 
-- [Website with Docsify Sidebar and Navbar](https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-multilanguage-site/main&homepage=home.md&sidebar=true&loadSidebar=_sidebar.md&loadNavbar=_navbar.md&name=Multi-language%20Site)
-- [Website with Docsify Sidebar, Navbar and Footer](https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-multilanguage-site/main&homepage=home.md&sidebar=true&loadSidebar=_sidebar.md&loadNavbar=_navbar.md&loadFooter=_footer.md&hide-credits=true&name=Multi-language%20Site)
-
+_Simple Visual Portfolio Template_  
 [Docsify-This Simple Visual Portfolio Template](https://github.com/hibbitts-design/docsify-this-simple-visual-portfolio) (based on [Notion Portfolio Template](https://www.notion.so/templates/design-portfolio-notion)), displayed by Docsify-This as a:
 
 - [Website](https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-simple-visual-portfolio/main&homepage=README.md&font-size=16px&browser-tab-title=Design%20Portfolio&loadFavicon=favicon.png "Docsify-This Simple Visual Portfolio")
@@ -1883,6 +1946,7 @@ The following style prefixes are available with Docsify-This:
 - [Website using the Merriweather font](https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-simple-visual-portfolio/main&homepage=README.md&font-size=16px&browser-tab-title=Design%20Portfolio&loadFavicon=favicon.png&font-family=Merriweather,Georgia,serif "Docsify-This Simple Visual Portfolio")
 - [Website with zoomable images](https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-simple-visual-portfolio/main&homepage=README.md&font-size=16px&browser-tab-title=Design%20Portfolio&loadFavicon=favicon.png&zoom-images=true "Docsify-This Simple Visual Portfolio")
 
+_Visual Portfolio Template_  
 [Docsify-This Visual Portfolio Template](https://github.com/hibbitts-design/docsify-this-visual-portfolio) (based on [Notion Portfolio Template](https://www.notion.so/templates/design-portfolio-notion)), displayed by Docsify-This as a:
 
 - [Website](https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-visual-portfolio/main&homepage=README.md&sidebar=true&loadSidebar=_sidebar.md&loadFavicon=favicon.png&name=Design%20Portfolio "Docsify-This Visual Portfolio")
@@ -1891,14 +1955,13 @@ The following style prefixes are available with Docsify-This:
 - [Website with zoomable images](https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-visual-portfolio/main&homepage=README.md&sidebar=true&loadSidebar=_sidebar.md&loadFavicon=favicon.png&name=Design%20Portfolio&zoom-images=true "Docsify-This Visual Portfolio")
 - [Website with pagination](https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-visual-portfolio/main&homepage=README.md&sidebar=true&loadSidebar=_sidebar.md&loadFavicon=favicon.png&name=Design%20Portfolio&pagination=true#/ "Docsify-This Visual Portfolio")
 
-A simple [Markdown Student Portfolio Starter Template](https://github.com/paulhibbitts/docsify-this-markdown-portfolio-starter) (based on [Markdown Portfolio Template](https://github.com/thoresonjd/markdown-portfolio-template) by [Justin Thoreson](https://github.com/thoresonjd)) which is viewable on both GitHub and with Docsify-This.net, displayed by Docsify-This as a:
+**Site Structure Templates**  
 
-- [Website](https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-markdown-student-portfolio-starter/main&homepage=README.md "Docsify-This Markdown Starter Portfolio Template")
-- [Website with automatic light/dark theme switching](https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-markdown-student-portfolio-starter/main&homepage=README.md&dark-mode=auto "Docsify-This Markdown Starter Portfolio Template")
-- [Website using the Merriweather font](https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-markdown-portfolio-starter-template/main&homepage=README.md&font-family=Merriweather,Georgia,serif "Docsify-This Markdown Starter Portfolio Template")
-- [Website using the Merriweather font and red links](https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-markdown-student-portfolio-starter/main&homepage=README.md&font-family=Merriweather,Georgia,serif&link-color=cc0000#/ "Docsify-This Markdown Starter Portfolio Template")
-- [Website with zoomable images](https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-markdown-student-portfolio-starter/main&homepage=README.md&zoom-images=true "Docsify-This Markdown Starter Portfolio Template")
-- [Website with 'Edit this Page' links](https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-markdown-portfolio-starter/main&homepage=README.md&edit-link=https://github.com/hibbitts-design/docsify-this-markdown-portfolio-starter/blob/main/README.md "Docsify-This Markdown Starter Portfolio Template")
+_Multi-language Site Template_  
+[Docsify-This Multi-language Site Template](https://github.com/hibbitts-design/docsify-this-multilanguage-site), displayed by Docsify-This as a:
+
+- [Website with Docsify Sidebar and Navbar](https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-multilanguage-site/main&homepage=home.md&sidebar=true&loadSidebar=_sidebar.md&loadNavbar=_navbar.md&name=Multi-language%20Site)
+- [Website with Docsify Sidebar, Navbar and Footer](https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-multilanguage-site/main&homepage=home.md&sidebar=true&loadSidebar=_sidebar.md&loadNavbar=_navbar.md&loadFooter=_footer.md&hide-credits=true&name=Multi-language%20Site)
 
 ---
 
@@ -2235,7 +2298,7 @@ Due to iframe cross-domain issues embedded content may not be able to be display
 For example, the following iFrame HTML:
 
 ```html
-<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRnnRFelgw1ksq_p8Eryg3dnyLCRRLPf5fBgdwdv9p-tCIwcxqWvzDGrGbjxGHL7HqEJVpmV26ntk3a/embed?start=false&loop=false&delayms=3000" frameborder="0" width=780" height="585" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRnnRFelgw1ksq_p8Eryg3dnyLCRRLPf5fBgdwdv9p-tCIwcxqWvzDGrGbjxGHL7HqEJVpmV26ntk3a/embed?start=false&loop=false&delayms=3000" style="border: none;" width="780" height="585" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 ```
 
 Would be changed to:
