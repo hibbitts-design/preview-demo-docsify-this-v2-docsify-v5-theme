@@ -29,13 +29,13 @@
 
 <h1 style="margin-top:6px;"><span class="subhead">Instantly Turn Online Markdown Files into Web&nbsp;Pages</span></h1>
 
-This open-source web app, built with magical documentation site generator [Docsify](https://docsify.js.org), lets you publish online [Markdown](https://en.wikipedia.org/wiki/Markdown) files as web pages without setting up your own website. Try it out below!
+This open-source web app, built with magical documentation site generator [Docsify](https://docsify.js.org), makes [Markdown](https://en.wikipedia.org/wiki/Markdown) publishing as simple as providing a file link - publish single pages or entire websites with no webserver required.
 
 <div id="docsifythisurlbuilder">
 
 <h2 style="margin-top:0px;">Web Page Builder</h2>
 
-<p style="margin-bottom:-8px;">Enter the URL of a Markdown file and view that file as a web page in a new Browser tab. The resulting Docsify-This page URL can be copied and shared or used as an iFrame source URL.</p>
+<p style="margin-bottom:-8px;">Turn your online Markdown files into styled, responsive web pages - just paste a file URL below. The resulting Docsify-This page can be shared as a standalone link or embedded into just about any platform.</p>
 
 **Markdown File URL** (GitHub, Codeberg or raw source URL):  
 
@@ -282,11 +282,13 @@ Page layout:
 
 </div>
 
-<h3>Custom Page Title</h3>
+<h3>Custom Page Additions</h3>
 
 <hr>
 
-<div class="docsifythisurlbuilderoptionsline">Title added to the top of page as H1 level header:<br><input aria-label="Title added to the top of page as H1 level header" type="text" maxlength="80" value="" id="pageTitle" name="pageTitle"/></div>
+<div class="docsifythisurlbuilderoptionsline">Add '←Back' link URL (displayed at top of page):<br><input aria-label="Add back link URL (displayed at top of page)" type="url" maxlength="200" value="" id="backLink" name="backLink"></div>
+
+<div class="docsifythisurlbuilderoptionsline">Add page title (as H1 header at top of page):<br><input aria-label="Add page title (as H1 header at top of page)" type="text" maxlength="200" value="" id="pageTitle" name="pageTitle"></div>
 
 <h3>Docsify Custom Files</h3>
 
@@ -713,7 +715,7 @@ The following additional URL parameters are available for use in Docsify-This UR
 
 ##### back-link<button type="button" class="copy-link" aria-label="Copy back-link parameter" onclick="event.stopPropagation(); event.preventDefault(); navigator.clipboard.writeText('&back-link=').then(()=>{const b=this;const orig=b.textContent;b.textContent='copied!';setTimeout(()=>b.textContent=orig,1500)})">copy</button>
 
-Add a custom back link to other sites at the top of your web pages with the optional back-link parameter (not included in the Advanced Web Page Builder), for example:  
+Add a custom back link to other sites at the top of your web pages with the optional back-link parameter, for example:  
 https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-one-page-article/main&homepage=home.md&back-link=https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-one-page-course/main+homepage=home.md+sidebar=true. Please note that since & is used to separate URL parameters, any & characters within the back-link URL must be replaced with + characters.
 
 ##### coverpage<button type="button" class="copy-link" aria-label="Copy coverpage parameter" onclick="event.stopPropagation(); event.preventDefault(); navigator.clipboard.writeText('&coverpage=').then(()=>{const b=this;const orig=b.textContent;b.textContent='copied!';setTimeout(()=>b.textContent=orig,1500)})">copy</button>
@@ -1920,11 +1922,15 @@ _Easy Markdown to Github Pages_
 - [Website with Docsify Sidebar and an 'Edit this Page' link](https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/nicolas-van/easy-markdown-to-github-pages/master&homepage=README.md&sidebar=true&edit-link=https://github.com/nicolas-van/easy-markdown-to-github-pages/blob/master/README.md "Easy Markdown to Github Pages - Web Page with Docsify Sidebar")
 
 _Markdown Content Demos_  
-[GitHub Markdown Content Demo file](https://github.com/hibbitts-design/docsify-this-markdown-content-demo/blob/main/README.md), displayed by Docsify-This as a [Web Page with 'Edit this Page' link](https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-markdown-content-demo/main&homepage=README.md&edit-link=https://github.dev/hibbitts-design/docsify-this-markdown-content-demo/blob/main/README.md) using the new [GitHub.dev web editor](https://docs.github.com/en/codespaces/the-githubdev-web-based-editor) (currently in Beta).
+[Standard and GitHub Flavored Markdown file](https://github.com/paulhibbitts/demo-markdown-file/blob/main/README.md), displayed by Docsify-This as a [Web Page with 'View raw Markdown' link](https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/paulhibbitts/demo-markdown-file/main&edit-link=https://raw.githubusercontent.com/paulhibbitts/demo-markdown-file/main/README.md&edit-link-text=View%20raw%20Markdown).
 
-[GitHub Markdown Content Demo file](https://github.com/hibbitts-design/docsify-this-markdown-content-demo/blob/main/README.md), displayed by Docsify-This as a [Web Page with 'View raw Markdown' link](https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-markdown-content-demo/main&edit-link=https://raw.githubusercontent.com/hibbitts-design/docsify-this-markdown-content-demo/main/README.md&edit-link-text=View%20raw%20Markdown).
+[Standard and GitHub Flavored Markdown Demo Codeberg file](https://codeberg.org/paulhibbitts/demo-markdown-file/src/branch/main/README.md), displayed by Docsify-This as a [Web Page with 'View raw Markdown' link](https://preview-v2.docsify-this.net?basePath=https://raw.codeberg.page/paulhibbitts/demo-markdown-file&homepage=README.md&edit-link=https://codeberg.org/paulhibbitts/demo-markdown-file/raw/branch/main/README.md&edit-link-text=View%20raw%20Markdown).
 
-[Codeberg Markdown Content Demo file](https://codeberg.org/paulhibbitts/docsify-this-markdown-content-demo/src/branch/main/README.md), displayed by Docsify-This as a [Web Page with 'View raw Markdown' link](https://preview-v2.docsify-this.net?basePath=https://raw.codeberg.page/paulhibbitts/docsify-this-markdown-content-demo/&edit-link=https://codeberg.org/paulhibbitts/docsify-this-markdown-content-demo/raw/branch/main/README.md&edit-link-text=View%20raw%20Markdown).
+[Docsify-This Markdown CSS Styles & Embeds Demo file](https://github.com/hibbitts-design/docsify-this-markdown-content-demo/blob/main/README.md), displayed by Docsify-This as a [Web Page with 'Edit this Page' link](https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-markdown-content-demo/main&homepage=README.md&edit-link=https://github.dev/hibbitts-design/docsify-this-markdown-content-demo/blob/main/README.md) using the new [GitHub.dev web editor](https://docs.github.com/en/codespaces/the-githubdev-web-based-editor) (currently in Beta).
+
+[Docsify-This Markdown CSS Styles & Embeds Demo file](https://github.com/hibbitts-design/docsify-this-markdown-content-demo/blob/main/README.md), displayed by Docsify-This as a [Web Page with 'View raw Markdown' link](https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-markdown-content-demo/main&edit-link=https://raw.githubusercontent.com/hibbitts-design/docsify-this-markdown-content-demo/main/README.md&edit-link-text=View%20raw%20Markdown).
+
+[Docsify-This Markdown CSS Styles & Embeds Demo Codeberg file](https://codeberg.org/paulhibbitts/docsify-this-markdown-content-demo/src/branch/main/README.md), displayed by Docsify-This as a [Web Page with 'View raw Markdown' link](https://preview-v2.docsify-this.net?basePath=https://raw.codeberg.page/paulhibbitts/docsify-this-markdown-content-demo/&edit-link=https://codeberg.org/paulhibbitts/docsify-this-markdown-content-demo/raw/branch/main/README.md&edit-link-text=View%20raw%20Markdown).
 
 **Technical/Specialized Content**  
 
