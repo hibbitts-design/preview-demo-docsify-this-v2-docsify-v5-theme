@@ -555,7 +555,7 @@
           }
 
           var getheaderweight = document.getElementById('headerweight').value;
-          if ((!(getheaderweight == "400")) && (!(document.getElementById('fontfamily').disabled)))  {
+          if ((!(getheaderweight == "600")) && (!(document.getElementById('fontfamily').disabled)))  {
             if (!url.includes('header-weight=')) {
               var URLparms = URLparms + `&header-weight=` + getheaderweight
             }
@@ -815,7 +815,7 @@
       document.getElementById("linkhovercolorpreview").style.backgroundColor = "transparent";
       document.getElementById("pagination").checked = false;
       document.getElementById("mergeNavbar").checked = false;
-      document.getElementById("headerweight").value = 400;
+      document.getElementById("headerweight").value = 600;
       document.getElementById("zoomimages").checked = false;
       document.getElementById("coverpagecolor").value = '#C1E1F6';
       document.getElementById("coverpagecolorpreview").style.borderColor = '#C1E1F6';
@@ -1654,6 +1654,10 @@
 
             dd && console.log('custom scroll plugin called!');
 
+            // Get topMargin from Docsify config or use default
+            let topMargin = (window.$docsify && window.$docsify.topMargin) || 0;
+            dd && console.log('topMargin setting:', topMargin);
+
             // Build the current URL without the hash
             let currentUrlWithoutHash = new URL(
               location.origin + location.pathname +
@@ -1688,11 +1692,20 @@
                     if (!excludedParent) {
                       // Use requestAnimationFrame for immediate scroll to the element
                       requestAnimationFrame(() => {
-                        // Scroll smoothly to the element's top position
+                        // Calculate the scroll position with topMargin offset
+                        let elementTop = targetElement.offsetTop + (targetElement.offsetParent?.offsetTop || 0);
+                        let scrollTop = elementTop - topMargin;
+                        
+                        // Ensure we don't scroll above the top of the page
+                        scrollTop = Math.max(0, scrollTop);
+                        
+                        dd && console.log('scrolling to position:', scrollTop, '(element top:', elementTop, '- topMargin:', topMargin, ')');
+                        
+                        // Scroll smoothly to the element's top position minus topMargin
                         window.scrollTo({
-                        top: targetElement.offsetTop + targetElement.offsetParent?.offsetTop || 0,
-                        behavior: 'smooth'
-                      });
+                          top: scrollTop,
+                          behavior: 'smooth'
+                        });
                       });
                     } else {
                       dd && console.log('Target is within an excluded parent:', excludedParent);
@@ -2378,7 +2391,7 @@
 
   <!-- Copy Code Plugin -->
   <script>
-    if (window.$docsify['basePath'] === undefined) {
+    if ((window.$docsify['basePath'] === undefined) || (getURLParameterByName(['code-copy','codeCopy'], null, null, window.location.href, true) === 'true')) {
       document.write('<script src="assets/vendor/docsify/plugins/docsify-code-copy.min.js"><\/script>');
     }
   </script>
