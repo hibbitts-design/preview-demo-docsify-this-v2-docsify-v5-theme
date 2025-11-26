@@ -26,6 +26,7 @@
 * Keyboard scrolling is supported within code blocks (via Docsify v5)
 * Improved search results, which exclude Markdown formatting syntax (via Docsify v5)
 * Added variable for applying Docsify v5 core theme defaults
+* Updated support of Docsify config topMargin to CSS var `scroll-padding-top`
 
 **Bugfix:**
 * Handle use of Coverpage title link with duplicate id via enhanced target scrolling
@@ -34,12 +35,36 @@
 **Breaking:**
 * With the use of Docsify v5, Legacy Browsers (for example, Internet Explorer 11) are no longer supported 
 
-## [1.10.7] - XX/XX/2025
+## [1.10.8] - 11/24/2025
+
+**New:**
+* Added value and unit fields for max width in Web Page Builder (in addition to URL parameter `max-width`)
+* Support scrolling to specific Web Page Builder sections
+* Web Page Builder option and URL parameter to initially close the Sidebar ( `close-sidebar`)
+* Added Docsify Page Actions Menu plugin, including customizations (with thanks and appreciation to @calycode for developing the plugin)
+* Support for Page Actions Menu plugin via Web Page Builder and optional `page-copy-button` URL parameter
+
+**Improved:**
+* Updated ReadMe
+* Minor Web Page Builder UI updates
+* Automatically adjust padding-top to 0 when max-width=100
+* Automatically adjust topMargin when max-width is a percentage
+* Keep sidebar font to default font size
+* Updated pre-configured styles to support presentation defaults
+* Delay visibility of Sidebar for better visual experience during delayed page loads
+
+**Bugfix:**
+* Added missing 600 weight Open Sans font
+* Adjusted behavior of `dark-mode=true` to match `dark-mode=on`
+* Support use of underlines when preloading Web Page Builder text fields
+* Fixed automatic dark theme for Embed.ly in dark mode
+
+## [1.10.7] - 10/01/2025🎃
 
 **New:**
 * Added sidebar banner image support via HTML image
 * Automatic image path resolution for HTML image assets using data-src attribute relative to site base path with fallback support
-* Added field for a custom back link to the top of the page in Advanced Web Page Builder (in addition to URL parameter `back-link`)
+* Added URL field for a custom back link to the top of the page in Advanced Web Page Builder (in addition to URL parameter `back-link`)
 * Added (long overdue) basic support for printing
 
 **Improved:**
@@ -47,6 +72,9 @@
 * Updated ReadMe
 * Improved support for Docsify configuration settings of 'topMargin'
 * Added larger font sizes in Web Page Builder to support use during presentations
+
+**Bugfix:**
+* Fix for custom edit link text and emoji for multiple page sites without Sidebar or Navbar
 
 ## [1.10.6] - 09/02/2025🏫
 
@@ -58,7 +86,7 @@
 * Updated ReadMe
 * Removed image for Twitter Cards and Open Graph
 * Relocated enable search field checkbox to basic URL parameters
-* Minor Web Page Builder UI updates
+* Minor refresh to Web Page Builder UI
 * Improved file error messages
 * Set page margins to 0 when max-width is set to 100%
 
@@ -75,6 +103,7 @@
 **Improved:**
 * Updated ReadMe, including a new Quickstart section
 * Improve visual design of h1 and h2 below top full width image (use HTML tags to keep default styling)
+* Fixed Font Awesome plugin regex to only match :fa- prefixed patterns
 
 **Bugfix:**
 * Minor CSS fixes
@@ -176,7 +205,7 @@
 * Provide default values in error handling to avoid possible script error
 * Add missing variable declaration for enabledarkmode
 
-## [1.9.14] - 10/17/2024
+## [1.9.14] - 10/16/2024
 
 **Improved:**
 * Updated CSS with word-wrap for code blocks
