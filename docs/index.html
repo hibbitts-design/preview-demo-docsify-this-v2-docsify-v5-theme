@@ -13,9 +13,9 @@
   <link rel="shortcut icon" href="#">
 
   <meta property="og:title" content="Docsify-This" />
-  <meta property="og:description" content="Markdown Web Publishing" />
+  <meta property="og:description" content="Publish and Style Online Markdown Files Instantly" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://docsify-this.net?v=0" />
+  <meta property="og:url" content="https://docsify-this.net?v=2" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@hibbittsdesign" />
@@ -2242,7 +2242,12 @@
             window.$docsify[key] = convertToBoolean(value);
           }
         } else {
-          if (key === 'name') {
+          // Handle nested properties
+          if (key.includes('.')) {
+            const [parent, child] = key.split('.');
+            window.$docsify[parent] = window.$docsify[parent] || {};
+            window.$docsify[parent][child] = convertToBoolean(value);
+          } else if (key === 'name') {
             window.$docsify[key] = replaceUnderscores(value);
           } else {
             window.$docsify[key] = convertToBoolean(value);
@@ -2441,15 +2446,6 @@
     }
   </script>
 
-  <!-- Mermaid Diagrams Plugin v2 -->
-  <!-- <script type="module">
-    import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";
-    mermaid.initialize({ startOnLoad: true });
-    window.mermaid = mermaid;
-  </script> -->
-  <!-- <script src="//unpkg.com/docsify-mermaid@2.0.0/dist/docsify-mermaid.js"></script> -->
-  <!-- <script src="assets/vendor/docsify/plugins/docsify-mermaid.js"></script> -->
-
   <!-- LaTeX Plugin -->
   <script src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS_CHTML"></script>
   <script src="assets/vendor/docsify/plugins/docsify-latex.js"></script>
@@ -2531,9 +2527,14 @@
       // Change body font size if fontSize parameter present
       fontsize = getURLParameterByName(['font-size', 'fontSize'], null, null, window.location.href, true);
       if (!(fontsize === false)) {
-        // If it's just a number, append 'px'
+        // If it's just a number, append appropriate unit
         if (!isNaN(fontsize) && !fontsize.includes('px') && !fontsize.includes('rem') && !fontsize.includes('em')) {
-          fontsize = fontsize + "px";
+          // If number is <= 3, assume it's the old Docsify-This rem format, otherwise assume px
+          if (parseFloat(fontsize) <= 4) {
+            fontsize = fontsize + "rem";
+          } else {
+            fontsize = fontsize + "px";
+          }
         }
 
         document.documentElement.style.setProperty('--font-size', fontsize);
@@ -2687,6 +2688,13 @@
   <script>
     if (!(window.$docsify['basePath'] === undefined) && ['true', 'nollm'].includes(getURLParameterByName(['page-copy-button', 'pageCopyButton', 'page-copy-menu', 'pageCopyMenu', 'page-actions-menu', 'pageActionsMenu'], null, null, window.location.href, true))) {
       document.write('<script src="assets/vendor/docsify/plugins/custom/docsify-page-actions-menu.js"><\/script>');
+    }
+  </script>
+
+  <!-- Experimental responsive tables -->
+  <script>
+     if ((window.$docsify['basePath'] === undefined) || (!(getURLParameterByName(['responsive-tables', 'responsiveTables'], null, null, window.location.href, true) === 'false'))) {
+      document.write('<script src="assets/vendor/docsify/plugins/custom/docsify-responsive-tables.js"><\/script>');
     }
   </script>
 
