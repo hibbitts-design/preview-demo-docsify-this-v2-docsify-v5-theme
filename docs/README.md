@@ -190,7 +190,7 @@ Page layout:
   <div style="display: flex; gap: 10px; ">
     <input type="number" id="maxWidthValue" name="maxWidthValue"
        style="width: 85px; height: 38px; vertical-align: top; "
-       value="910" step="10">
+       value="840" step="10">
     <select style="height: 38px; vertical-align: top; "
         id="maxWidthValueUnit" name="maxWidthValueUnit" value="px" onchange="updateMaxWidthStep()">
       <option value="px" data-step="20" selected>Pixels (px)</option>
@@ -1965,10 +1965,38 @@ Automatically added to all iFrames with the source domains 'youtube.com' or 'doc
   font-weight: bold;
   text-decoration: none;
 }
-
 </style>
 
-In addition to the Markdown CSS classes supported by Docsify-This, you can also define your own custom classes within your displayed Markdown files, for example:
+In addition to the Markdown CSS classes supported by Docsify-This, you can also leverage the Docsify v5 [theme system](https://preview.docsifyjs.org/#/themes?id=customization) via [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties), for example in a Markdown file:  
+
+<style>
+  :root {
+    /* Typography */
+    --font-family: system-ui,sans-serif;
+    --line-height: 1.4;
+    --font-size: 20px;
+    --font-weight: 400;
+
+    /* Content */
+    --content-max-width: 800px;
+
+    /* Headings */
+    --heading-color: #0891b2;
+    --heading-font-weight: 700;
+
+    /* Theme */
+    --theme-color: #9333ea !important;
+
+    /* Links */
+    --link-color: #9333ea !important;
+    --link-color-hover: var(--link-color) !important;
+    --link-underline-thickness: auto;
+    --link-underline-thickness-hover: var(--link-underline-thickness);
+  }
+</style>
+```
+
+You can also define your own custom classes within your displayed Markdown files, for example:
 
 [Custom CSS Class Button](# ":class=mybutton")
 
@@ -2238,7 +2266,7 @@ https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/h
 
 When the sidebar toggles in desktop view, the content area width can change if the width of the sidebar and content area is wider than the current Browser window, causing text reflow. To prevent this, set the `max-width` parameter to match or be slightly less than the content width when the sidebar is visible.
 
-For example, to reduce the content width from the default 910px to minimize text repositioning when showing/hiding the sidebar:
+For example, to reduce the content width from the default 840px to minimize text repositioning when showing/hiding the sidebar:
 https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-one-page-article/main&homepage=home.md&sidebar=true&maxLevel=3&max-width=810px
 
 ##### Providing a Page Table of Contents within a Smaller Area

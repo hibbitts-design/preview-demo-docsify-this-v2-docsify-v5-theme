@@ -41,18 +41,18 @@
   <!-- Stylesheets -->
 
   <!-- Core Theme -->
-  <link rel="stylesheet" href="https://docsify-preview-docsifyjs.vercel.app/dist/themes/core.min.css" />
-  <!-- <link rel="stylesheet" href="assets/vendor/themes/core.min.css" /> -->
+  <link rel="stylesheet" href="https://docsify-preview-git-marked-17-docsifyjs.vercel.app/dist//themes/core.min.css" />
+  <!-- <link rel="stylesheet" href="assets/vendor/docsify/themes/core.min.css" /> -->
 
   <!-- Core Dark (add-on) -->
-  <link rel="stylesheet" href="https://docsify-preview-docsifyjs.vercel.app/dist/themes/addons/core-dark.min.css"
+  <link rel="stylesheet" href="https://docsify-preview-git-marked-17-docsifyjs.vercel.app/dist/themes/addons/core-dark.min.css"
     data-sheet="dark-mode" disabled />
-  <!-- <link rel="stylesheet" href="assets/vendor/themes/addons/core-dark.min.css" data-sheet="dark-mode" disabled /> -->
+  <!-- <link rel="stylesheet" href="assets/vendor/docsify/themes/addons/core-dark.min.css" data-sheet="dark-mode" disabled /> -->
 
   <!-- Core Dark (add-on) -->
-  <link rel="stylesheet" href="https://docsify-preview-docsifyjs.vercel.app/dist/themes/addons/core-dark.min.css"
+  <link rel="stylesheet" href="https://docsify-preview-git-marked-17-docsifyjs.vercel.app/dist/themes/addons/core-dark.min.css"
     media="(prefers-color-scheme: dark)" data-sheet="dark-mode-auto" />
-  <!-- <link rel="stylesheet" href="assets/vendor/themes/addons/core-dark.min.css" media="(prefers-color-scheme: dark)"
+  <!-- <link rel="stylesheet" href="assets/vendor/docsify/themes/addons/core-dark.min.css" media="(prefers-color-scheme: dark)"
     data-sheet="dark-mode-auto" /> -->
 
   <link rel="stylesheet" href="assets/css/docsify-this-v2.css">
@@ -592,7 +592,7 @@
 
           var getmaxwidthvalue = document.getElementById('maxWidthValue').value;
           var getmaxwidthvalueunit = document.getElementById('maxWidthValueUnit').value;
-          if (!((getmaxwidthvalue == "910") && (getmaxwidthvalueunit == "px"))) {
+          if (!((getmaxwidthvalue == "840") && (getmaxwidthvalueunit == "px"))) {
             if (!url.includes('max-width=')) {
               if (getmaxwidthvalueunit == "%") {
                 getmaxwidthvalueunit = ''
@@ -733,7 +733,7 @@
 
       // Set appropriate default for each unit
       const defaults = {
-        'px': '910',
+        'px': '840',
         '%': '100',
         'ch': '65'
       };
@@ -865,7 +865,7 @@
       document.getElementById("headerweight").value = 600;
       document.getElementById("zoomimages").checked = false;
       document.getElementById("closesidebar").checked = false;
-      document.getElementById("maxWidthValue").value = 910;
+      document.getElementById("maxWidthValue").value = 840;
       document.getElementById("maxWidthValueUnit").value = 'px';
       document.getElementById("coverpagecolor").value = '#C1E1F6';
       document.getElementById("coverpagecolorpreview").style.borderColor = '#C1E1F6';
@@ -2297,7 +2297,7 @@
 
   <!-- Docsify v5 release -->
   <!-- <script src="https://cdn.jsdelivr.net/npm/docsify@rc/dist/docsify.min.js"></script> -->
-  <script src="https://docsify-preview-docsifyjs.vercel.app/dist/docsify.min.js"></script>
+  <script src="https://docsify-preview-git-marked-17-docsifyjs.vercel.app/dist/docsify.min.js"></script>
   <!-- <script src="assets/vendor/docsify/docsify.min.js"></script> -->
 
   <!-- Adjust Page Margins When Standalone or Embedded -->
@@ -2392,7 +2392,7 @@
 
   <!-- Footnotes Plugin -->
   <!-- <script src="//cdn.jsdelivr.net/npm/@sy-records/docsify-footnotes/lib/index.min.js"></script> -->
-  <script src="https://cdn.jsdelivr.net/npm/@sy-records/docsify-footnotes/dist/index.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@sy-records/docsify-footnotes@2.2.2/dist/index.min.js"></script>
 
   <!-- Pagination Plugin -->
   <script>
@@ -2520,8 +2520,6 @@
       } else {
         if ((getURLParameterByName(['core-theme-styles', 'coreThemeStyles', 'docsify-core-theme'], null, null, window.location.href, true) === 'true') || corethemestyles) {
           document.documentElement.style.setProperty('--font-family', 'system-ui, sans-serif');
-        } else {
-          document.documentElement.style.setProperty('--font-family', '"Source Sans 3","Helvetica Neue",sans-serif');
         }
       }
 
@@ -2658,12 +2656,12 @@
 
       // Docsify Search Plugin "develop" branch preview files
       // document.write('<script src="assets/vendor/docsify/plugins/search.min.js"><\/script>');
-      document.write('<script src="https://docsify-preview-docsifyjs.vercel.app/dist/plugins/search.min.js"><\/script>');
+      document.write('<script src="https://docsify-preview-git-marked-17-docsifyjs.vercel.app/dist/plugins/search.min.js"><\/script>');
     }
   </script>
 
   <!-- Frontmatter Plugin -->
-  <script src="assets/vendor/docsify/plugins/docsify-frontmatter.min.js"></script>
+  <script src="https://docsify-preview-git-marked-17-docsifyjs.vercel.app/dist/plugins/front-matter.min.js"></script>
 
   <!-- Image Grid Plugin -->
   <script src="assets/vendor/docsify/plugins/custom/docsify-img-grid.js"></script>

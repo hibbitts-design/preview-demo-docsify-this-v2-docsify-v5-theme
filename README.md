@@ -1375,7 +1375,37 @@ Automatically added to all iFrames with the source domains 'youtube.com' or 'doc
 
 #### Custom Markdown CSS Classes
 
-In addition to the Markdown CSS classes supported by Docsify-This, you can also define your own custom classes within your displayed Markdown files, for example:
+In addition to the Markdown CSS classes supported by Docsify-This, you can also leverage the Docsify v5 [theme system](https://preview.docsifyjs.org/#/themes?id=customization) via [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties), for example in a Markdown file:  
+
+```
+<style>
+  :root {
+    /* Typography */
+    --font-family: system-ui,sans-serif;
+    --line-height: 1.4;
+    --font-size: 20px;
+    --font-weight: 400;
+
+    /* Content */
+    --content-max-width: 800px;
+
+    /* Headings */
+    --heading-color: #0891b2;
+    --heading-font-weight: 700;
+
+    /* Theme */
+    --theme-color: #9333ea !important;
+
+    /* Links */
+    --link-color: #9333ea !important;
+    --link-color-hover: var(--link-color) !important;
+    --link-underline-thickness: auto;
+    --link-underline-thickness-hover: var(--link-underline-thickness);
+  }
+</style>
+```
+
+You can also define your own custom classes within your displayed Markdown files, for example:
 
 CSS in Markdown file:
 
