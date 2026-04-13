@@ -1,6 +1,6 @@
 # Changelog
 
-## [2.0.0] - XX/XX/2025
+## [2.0.0] - XX/XX/2026
 
 **New:**
 * Built with the modernized and refactored Docsify v5 platform
@@ -12,6 +12,7 @@
 * Support of optional theme-classes parameter (`theme-classes=true`) to add one or more Docsify core theme classes
 * Mermaid diagram support is now handled directly via Marked.js + Mermaid.js (no additional plugin needed)
 * Added support for responsive tables (with thanks and appreciation to @jhildenbiddle for the original Docsify v4 Themeable plugin)
+* Added support of optional sidebar-collapse parameter (`sidebar-collapse=true`) to make top-level sidebar sections collapsible
 
 **Improved:**
 * Updated ReadMe
@@ -29,15 +30,39 @@
 * Added variable for applying Docsify v5 core theme defaults
 * Updated support of Docsify config topMargin to CSS var `scroll-padding-top`
 * Updated support of inline CSS vars from Docsify Themeable to Docsify v5 Theme system
-
-**Bugfix:**
-* Handle use of Coverpage title link with duplicate id via enhanced target scrolling
-* Fixed Font Awesome plugin regex to only match :fa- prefixed patterns
+* Move responsive table layout to core CSS so tables render correctly
+* Improve toc and toc-narrow display
 
 **Breaking:**
 * With the use of Docsify v5, Legacy Browsers (for example, Internet Explorer 11) are no longer supported 
 
-## [1.10.9] - XX/XX/2026
+## [1.11.2] - XX/XX/2026
+
+**Improved:**
+* Updated ReadMe
+
+**Bugfix:**
+* Workaround for Docsify upstream bug - relative path handling in sub-documents (`relative-paths=true`)
+* Skip currentPageDir prefix for root-anchored links starting with #/ (i.e. ToC links)
+
+## [1.11.1] - 03/17/2026☘️
+
+**Improved:**
+* Banner can now be hidden by default on Web Page Builder page using inline CSS
+* Further visual refinements to the Web Page Builder
+* Updated ReadMe
+
+## [1.11.0] - 02/01/2026
+
+**New:**
+* Add Inter font choice, which also enables rendering Grav CMS Helios page content with visual consistency
+
+**Improved:**
+* Visual refresh of Web Page Builder with various refinements and enhanced dark mode styling
+* Improved text wrapping for longer labels in non-English languages, especially on smaller screens
+* Refactored Docsify-This CSS to use CSS custom properties (variables)
+
+## [1.10.9] - 12/23/2025🎊
 
 **Improved:**
 * Hide empty rows in responsive tables
@@ -45,6 +70,7 @@
 * Support nested properties via URL parameters
 * Updated ReadMe
 * Enhanced support for inline Docsify Themeable CSS vars
+* Minor refresh of Sidebar UI
 
 **Bugfix:**
 * Accommodate legacy use of default font sizes being in rem units

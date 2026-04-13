@@ -1,3 +1,22 @@
+<style>
+html {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  background-attachment: fixed;
+  min-height: 100%;
+}
+
+body {
+  background: transparent;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    background-attachment: fixed;
+  }
+}
+</style>
+
 <div id="docsifythis">
 
 <div class="docsifythisheader">
@@ -8,11 +27,11 @@
   </div>
 </div>
 
-<div id="banner">
-  <div style="background: #fdf4d3; border: 2px solid #f0e4b3; border-radius: 8px; padding: 12px; margin: 20px 0; display: flex; align-items: center; gap: 12px;">
-    <div style="flex: 1;">
-      <strong style="color: #8b6914; font-size: 17px;">This is a preview of Docsify-This v2.0</strong>
-      <div style="color: #666; margin-top: 2px; font-size: 16px; display: block;">
+<div id="banner" style="display: block;">
+  <div style="background: linear-gradient(135deg, #fafaf9 0%, #f5f5f4 100%); border: 1px solid #e7e5e4; border-radius: 16px; padding: 20px 24px; margin: 24px 0; display: flex; align-items: center; gap: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.02), inset 0 1px 0 rgba(255,255,255,0.6);">
+    <div style="flex: 1; min-width: 0;">
+      <strong style="color: #92400e;">This is a preview of Docsify-This v2.0</strong>
+      <div style="color: #57534e; margin-top: 2px; font-size: 18px; display: block;">
         <style>
           @media (max-width: 768px) {
             .hide-on-mobile {
@@ -20,10 +39,10 @@
             }
           }
         </style>
-        <span class="hide-on-mobile">URLs generated here are temporary and will need to be updated when v2.0 is released.</span>
+        <span class="hide-on-mobile">Preview URLs are temporary and will need to be updated when v2.0 releases.</span>
       </div>
     </div>
-    <a href="https://docsify-this.net" style="background: #b8941f; color: #ffffff; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; white-space: nowrap;">Switch to v1.0</a>
+    <a href="https://docsify-this.net" style="background: #d97706; color: #ffffff; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; white-space: nowrap; box-shadow: 0 1px 2px rgba(0,0,0,0.05); transition: all 0.2s ease; flex-shrink: 0;">Switch to v1.0</a>
   </div>
 </div>
 
@@ -71,24 +90,24 @@ Page layout:
 <label>
   <input type="radio" name="pagestyle" id="stylecontentonly" aria-label="Page Content Only" checked/>
   <img style="padding: 1px;" src="images/contentonly.png" alt="Page Content Only"/>
-  <figcaption id="caption">Content Only</figcaption>
+  <figcaption style="overflow-wrap: break-word; word-break: break-word; hyphens: auto; text-align: left;" id="caption">Content Only</figcaption>
 </label>
 
 <label>
   <input type="radio" name="pagestyle" id="styletoc" aria-label="Page with Table of Contents"/>
   <img style="padding: 1px;" src="images/toc.png" alt="Page with Table of Contents"/>
-  <figcaption id="caption">Table of Contents</figcaption>
+  <figcaption style="overflow-wrap: break-word; word-break: break-word; hyphens: auto; text-align: left;" id="caption">Table of Contents</figcaption>
 </label>
 
 <label>
   <input type="radio" name="pagestyle" id="stylesidebar" aria-label="Page with Docsify Sidebar (collapsible)"/>
   <img style="padding: 1px;" src="images/sidebar.png" alt="Page with Docsify Sidebar (collapsible)"/>
-  <figcaption id="caption">Docsify Sidebar</figcaption>
+  <figcaption style="overflow-wrap: break-word; word-break: break-word; hyphens: auto; text-align: left;" id="caption">Docsify Sidebar</figcaption>
 </label>
 
 </div>
 
-<div class="docsifythisurlbuilderoptionsline"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="editCheck"/><label for="editCheck">Include 'Edit this Page' link with GitHub or Codeberg files (default location is bottom of page)</label></div>
+<div class="docsifythisurlbuilderoptionsline" style="margin-right: -8px;"><input class="docsifythisurlbuildercheckbox" type="checkbox" id="editCheck"/><label for="editCheck">Include 'Edit this Page' link with GitHub or Codeberg files (at bottom of page by default)</label></div>
 
 <div id="docsifythisurlbuildershowhidelink"><a name='toggleDivlink' href='#' onclick='toggleDiv(this); return false;'>Show More Page Appearance Options &raquo;</a></div>
 
@@ -110,6 +129,7 @@ Page layout:
    <option value="Arial,sans-serif">Arial, sans-serif</option>
    <option value="Helvetica,sans-serif">Helvetica, sans-serif</option>
    <option value="Helvetica%20Neue,Helvetica,Arial,sans-serif">Helvetica Neue, sans-serif</option>
+   <option value="Inter,sans-serif">Inter, sans-serif</option>
    <option value="Lato%20Extended,Lato,Helvetica%20Neue,Helvetica,Arial,sans-serif">Lato, sans-serif</option>
    <option value="Open%20Sans,sans-serif">Open Sans, sans-serif</option>
    <option value="system-ui,sans-serif">System UI, sans-serif</option>
@@ -120,7 +140,7 @@ Page layout:
    <option value="Times%20New%20Roman,serif">Times New Roman, serif</option>
    <option value="Courier,monospace">Courier, monospace</option>
  </select>
- <span id="fontPreview" style="display: inline-block; vertical-align: middle; margin-right: 6px; font-size: 1.2em; border: 1px dashed #ccc; padding: 2px 5px; background-color: var(--mono-tint3); color: var(--base-color); width: 118px; box-sizing: border-box; overflow: hidden; text-align: center;">AaBb 123</span>
+ <span id="fontPreview" style="display: inline-block; vertical-align: middle; margin-right: 6px; font-size: 1.2em; border: 1px dashed #ccc; padding: 2px 5px; background-color: var(--color-mono-2); color: var(--dt-text-muted); width: 118px; box-sizing: border-box; overflow: hidden; text-align: center;">AaBb 123</span>
 </div>
 
 <div class="stackedlabeldropdown">
@@ -134,7 +154,7 @@ Page layout:
     min="10" 
     max="72" 
     step="1"
-    style="width: 70px;"
+    style="height: 38px;width: 70px;"
   >
 </div>
 
@@ -149,7 +169,7 @@ Page layout:
     min="1.0" 
     max="3.0" 
     step="0.1"
-    style="width: 70px;"
+    style="height: 38px;width: 70px;"
   >
 </div>
 
@@ -379,7 +399,7 @@ Page layout:
 
 </div>
 
-<div id="docsifythisurlbuilderrestoredefaultsbutton"><input style="border-color: #8e8f9d;" type="button" id="btn_4" value="Reset to Defaults" onclick="restoreAllDefaults()"/></div>
+<div id="docsifythisurlbuilderrestoredefaultsbutton"><input style="border-color: #8e8f9d; white-space: normal; overflow-wrap: break-word; word-break: break-word;" type="button" id="btn_4" value="Reset to Defaults" onclick="restoreAllDefaults()"/></div>
 
 </div>
 
@@ -400,7 +420,7 @@ No online Markdown file handy? **Copy and paste this example URL** - an overview
 https://github.com/hibbitts-design/markdown/blob/main/ReadMe.md
 ```
 
-[See the above ReadMe file displayed with Docsify Sidebar and a searchbox, using the Merriweather font →](https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/markdown/main&homepage=ReadMe.md&sidebar=true&font-family=Merriweather,Georgia,serif&searchbox=true&dark-mode=auto ':target=_blank')
+[See the above ReadMe file displayed with Docsify Sidebar and searchbox, using the Merriweather font →](https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/hibbitts-design/markdown/main&homepage=ReadMe.md&sidebar=true&font-family=Merriweather,Georgia,serif&searchbox=true&dark-mode=auto ':target=_blank')
 
 > [!TIP]
 >
@@ -456,6 +476,7 @@ https://github.com/hibbitts-design/markdown/blob/main/ReadMe.md
 ### [6. Support and Policies](/?id=_6-support-and-policies)
 
 - [Privacy Policy Summary](/?id=privacy-policy-summary)
+- [Content Responsibility](/?id=content-responsibility)
 - [Contact and Support](/?id=contact-and-support)
 
 </div>
@@ -485,7 +506,7 @@ Docsify-This provides a quick way to transform and style [Markdown content](http
 
 With Docsify-This you can:
 
-- Transform online Markdown files into visually styled web pages or complete websites — no technical setup or hosting required
+- Transform online Markdown files into visually styled web pages or complete websites — no technical setup or web server required
 - Present your materials, courses, documentation, and projects in a clean, professional style great for workshops, presentations, and online sharing
 - Maintain full control over your content by keeping files in their original locations, such as GitHub or Codeberg repositories
 - Style and customize web pages with a point-and-click Web Page Builder — no coding or technical expertise required
@@ -583,11 +604,11 @@ Here are a few real-world examples of how educators and creators are using Docsi
 
 - **[OpenLab Project Documentation](https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/davidmalawey/openLab/main&homepage=home.md&edit-link=https://github.com/davidmalawey/openLab/blob/main&sidebar=true&browser-tab-title=OpenLab_Project&edit-link-top=true&hide-credits=true&loadFavicon=favicon.png&loadSidebar=_sidebar.md&loadNavbar=_navbar.md&name=OpenLab_Project&searchbox=true&page-title=OpenLab&mergeNavbar=true&zoom-images=true&dark-mode=true)** - Documented robotics prototyping lab at Texas A&M University
 - **[Digital Literacy Course](https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/harlows/TERTL509/main/modules/introduction&homepage=overview.md&browser-tab-title=TERTL509&hide-credits=true&sidebar=true&loadSidebar=_sidebar.md&subMaxLevel=3&loadFooter=_footer.md)** - Open university course on digital literacy, which adapts Ontario Extend OER content
-- **[Intro to Software Engineering Course](https://preview-v2.docsify-this.net?basePath=https%3A%2F%2Fraw.githubusercontent.com%2FParsa-Rajabi%2FCMPT-276%2Fmain%2Fdocs&homepage=syllabus.md&sidebar=true&font-family=Lato%20Extended%2CLato%2CHelvetica%20Neue%2CHelvetica%2CArial%2Csans-serif&font-size=16px&link-color=cc0633&loadSidebar=_sidebar.md&name=CMPT_276&dark-mode=auto&link-color-dark-mode=ea7688)** - Docsify Open Course Starter Kit branded for SFU, as displayed by Docsify-This
+- **[Ethics & Other Management Issues in Information Systems](https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/Parsa-Rajabi/CIS-485/main/docs&homepage=home.md&sidebar=true&font-family=Lato%20Extended,Lato,Helvetica%20Neue,Helvetica,Arial,sans-serif&font-size=16px&loadSidebar=_sidebar.md&name=CIS%20485&loadFavicon=assets/favicon/favicon-ufv.ico&dark-mode=auto)** - Docsify Open Course Starter Kit for UFV, as displayed by Docsify-This
 
 BONUS: [What’s up, Doc? Docsifying the SPLOT Docs](https://cogdogblog.com/2022/08/docsifying-splot-docs/) - Blog post about using Docsify-This to provide one source of project documentation in multiple contexts.
 
-x2 BONUS: [SFU CMPT-363 Canvas Course](https://canvas.sfu.ca/courses/69678) - Paul Hibbitts' past university course using [GitHub Markdown files](https://github.com/paulhibbitts/cmpt-363-222-pages) as constraint-free Markdown/HTML content seamlessly embedded within Canvas LMS.
+x2 BONUS: [SFU CMPT-363 Canvas Course](https://sfu.instructure.com/courses/2602) - Paul Hibbitts' past university course using [GitHub Markdown files](https://github.com/paulhibbitts/cmpt-363-222-pages-mirror-instructure) as constraint-free Markdown/HTML content seamlessly embedded within Canvas LMS.
 
 ---
 
@@ -950,7 +971,7 @@ https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/h
 ##### theme-classes<button type="button" class="copy-link" aria-label="Copy theme-classes parameter" onclick="event.stopPropagation(); event.preventDefault(); navigator.clipboard.writeText('&theme-classes=').then(()=>{const b=this;const orig=b.textContent;b.textContent='copied!';setTimeout(()=>b.textContent=orig,1500)})">copy</button>
 
 Add one or more Docsify v5 [core theme classes](https://preview.docsifyjs.org/#/themes?id=classes) with the optional **theme-classes** parameter (not included in the Advanced Web Page Builder), for example:  
-https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-multiple-page-course-site/main&homepage=home.md&sidebar=true&loadSidebar=_sidebar.md&name=CPT-363&loadNavbar=_navbar.md&mergeNavbar=true&hide-credits=true&browser-tab-title=CPT-363&theme-classes=sidebar-chevron-left,sidebar-toggle-hamburger
+https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-multiple-page-course-site/main&homepage=home.md&sidebar=true&loadSidebar=_sidebar.md&name=CPT-363&loadNavbar=_navbar.md&mergeNavbar=true&hide-credits=true&browser-tab-title=CPT-363&theme-classes=sidebar-chevron-left,sidebar-group-box,sidebar-toggle-hamburger
 
 ---
 
@@ -1297,7 +1318,7 @@ Multiple Page Course Site [home.md](https://github.com/hibbitts-design/docsify-t
 
 <div class="docsifythiscolumn35" >
 
-[![LMS Content Pages Template](images/docsify-this-lms-content-pages.jpg ":class=docsify-this-screenshot")](https://canvas.sfu.ca/courses/76289)
+[![LMS Content Pages Template](images/docsify-this-lms-content-pages.jpg ":class=docsify-this-screenshot")](https://sfu.instructure.com/courses/2602)
 
 </div>
 
@@ -1315,7 +1336,7 @@ Example pages, including the use of the `font-family`, `font-size` and `hide-cre
 - [Embeddable Guide Page - using accordion format](https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-lms-content-pages/main&homepage=ux-techniques-guide.md&font-family=Lato%20Extended,%20Lato,Helvetica%20Neue,%20Helvetica,%20Arial,%20sans-serif&font-size=16px&hide-credits=true "Embeddable UX Techniques Guide Page (using Accordion format)") ([ux-techniques-guide.md](https://github.com/hibbitts-design/docsify-this-lms-content-pages/blob/main/ux-techniques-guide.md))
 - [Embeddable Contact Page](https://preview-v2.docsify-this.net?basePath=https://raw.githubusercontent.com/hibbitts-design/docsify-this-lms-content-pages/main&homepage=contact.md&font-family=Lato%20Extended,%20Lato,Helvetica%20Neue,%20Helvetica,%20Arial,%20sans-serif&font-size=16px&hide-credits=true "Embeddable Contact Page") ([contact.md](https://github.com/hibbitts-design/docsify-this-lms-content-pages/blob/main/contact.md))
 
-View an example Canvas LMS site using Docsify-This content at https://canvas.sfu.ca/courses/76692.
+View an example Canvas LMS site using Docsify-This content at https://sfu.instructure.com/courses/2602.
 
 </div>
 
@@ -1969,6 +1990,7 @@ Automatically added to all iFrames with the source domains 'youtube.com' or 'doc
 
 In addition to the Markdown CSS classes supported by Docsify-This, you can also leverage the Docsify v5 [theme system](https://preview.docsifyjs.org/#/themes?id=customization) via [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties), for example in a Markdown file:  
 
+```
 <style>
   :root {
     /* Typography */
@@ -1988,13 +2010,16 @@ In addition to the Markdown CSS classes supported by Docsify-This, you can also 
     --theme-color: #9333ea !important;
 
     /* Links */
-    --link-color: #9333ea !important;
-    --link-color-hover: var(--link-color) !important;
+    --link-color: var(--theme-color);
+    --link-color-hover: var(--theme-color);
     --link-underline-thickness: auto;
     --link-underline-thickness-hover: var(--link-underline-thickness);
+    --sidebar-font-size: 18px;
   }
 </style>
 ```
+
+Here is an example Markdown file containing the above styles, as displayed by Docsify-This (notice no URL parameters are required for visual styling): https://preview-v2.docsify-this.net/?basePath=https://raw.githubusercontent.com/paulhibbitts/markdown-file-examples/main&homepage=custom-theme-vars-v5.md&sidebar=true
 
 You can also define your own custom classes within your displayed Markdown files, for example:
 
@@ -2239,7 +2264,9 @@ This streamlined approach also enables authors to help other authors by sharing 
 
 ##### Understanding Path Handling in Docsify-This
 
-Docsify, the parent project of Docsify-This, currently handles paths inconsistently, which can cause links to break in nested directories. Until this issue is addressed, it is recommended to keep all content files at the root level and only nesting non-markdown assets. See [Docsify issue #1891](https://github.com/docsifyjs/docsify/issues/1891) for details
+Docsify, the parent project of Docsify-This, currently handles paths inconsistently, which can cause links to break in nested directories. Until this issue is addressed, it is recommended to keep all content files at the root level and only nesting non-markdown assets. See [Docsify issue #1891](https://github.com/docsifyjs/docsify/issues/1891) for details.
+
+If nesting content files is required, add the URL parameter ?relative-paths=true to your Docsify-This URL. Use explicit relative path prefixes for all links — ./filename.md for same-directory links and ../ or ../../ for parent directories (e.g. ../readme.md, ../../readme.md). Note that this parameter is not compatible with full root-relative paths (e.g. level1/foo.md). This is an unlisted advanced parameter for this specific scenario.
 
 ##### Matching Fonts with Your Destination Platform Content
 
@@ -2523,6 +2550,7 @@ Docsify-This (as with Docsify itself) will only execute the first script include
 ### 6. Support and Policies
 
 - [Privacy Policy Summary](#privacy-policy-summary)
+- [Content Responsibility](#content-responsibility)
 - [Contact and Support](#contact-and-support)
 
 ---
@@ -2536,6 +2564,12 @@ Docsify-This (as with Docsify itself) will only execute the first script include
 - The open source JavaScript tools [Mermaid](https://mermaid.js.org/) and [MathJax](https://www.mathjax.org/) are automatically loaded via [jsDelivr](https://www.jsdelivr.com/terms) when displaying remote Markdown files
 - The web service [Hypothes.is](https://web.hypothes.is/privacy/) is only loaded if chosen when displaying remote Markdown files
 - The web service [Embed.ly](https://embed.ly/legal/privacy) is only loaded if [Embedly Card](https://embed.ly/cards) elements are present in remote Markdown files
+
+---
+
+#### Content Responsibility
+
+**You are solely responsible for content you display via this service.** Docsify-This renders content from URLs you provide but does not host, store, or control that content. Users must comply with all applicable laws. To report problematic content, contact the platform hosting the displayed source content.
 
 ---
 
