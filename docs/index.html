@@ -42,16 +42,16 @@
   <!-- Stylesheets -->
 
   <!-- Core Theme -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/hibbitts-design/docsify@latest/dist/themes/core.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/hibbitts-design/docsify@5/themes/core.min.css" />
   <!-- <link rel="stylesheet" href="assets/vendor/docsify/themes/core.min.css" /> -->
 
   <!-- Core Dark (add-on) -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/hibbitts-design/docsify@latest/dist/themes/addons/core-dark.min.css"
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/hibbitts-design/docsify@5/themes/addons/core-dark.min.css"
     data-sheet="dark-mode" disabled />
   <!-- <link rel="stylesheet" href="assets/vendor/docsify/themes/addons/core-dark.min.css" data-sheet="dark-mode" disabled /> -->
 
   <!-- Core Dark (add-on) -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/hibbitts-design/docsify@latest/dist/themes/addons/core-dark.min.css"
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/hibbitts-design/docsify@5/themes/addons/core-dark.min.css"
     media="(prefers-color-scheme: dark)" data-sheet="dark-mode-auto" />
   <!-- <link rel="stylesheet" href="assets/vendor/docsify/themes/addons/core-dark.min.css" media="(prefers-color-scheme: dark)"
     data-sheet="dark-mode-auto" /> -->
@@ -295,6 +295,13 @@
           if (cb21.checked) {
             if (!url.includes('page-copy-button=')) {
               var URLparms = URLparms + `&page-copy-button=true`;
+            }
+          }
+
+          const cb23 = document.querySelector('#spotlight');
+          if (cb23.checked) {
+            if (!url.includes('spotlight=')) {
+              var URLparms = URLparms + `&spotlight=true`;
             }
           }
 
@@ -763,7 +770,7 @@
 
     function selectText() {
       const input = document.getElementById('docsifythisurlfield');
-      input.focus();
+      input.focus({ preventScroll: true });
       input.select();
     }
 
@@ -851,6 +858,7 @@
       document.getElementById("toch3").checked = false;
       document.getElementById("maxLevel").value = 2;
       document.getElementById("pageCopyButton").checked = false;
+      document.getElementById("spotlight").checked = false;
       document.getElementById("hideCredits").checked = false;
       document.getElementById("hypothesisenable").checked = false;
       document.getElementById("docsifyV5coretheme").checked = false;
@@ -2081,6 +2089,10 @@
               document.getElementById("pageCopyButton").checked = true;
             }
 
+            if (getURLParameterByName('spotlight', null, null, window.location.href, true) === 'true') {
+              document.getElementById("spotlight").checked = true;
+            }
+
             if (getURLParameterByName(['hide-credits', 'hideCredits'], null, null, window.location.href, true) === 'true') {
               document.getElementById("hideCredits").checked = true;
             }
@@ -2364,7 +2376,7 @@
 
   <!-- Docsify v5 release -->
   <!-- <script src="https://cdn.jsdelivr.net/npm/docsify@rc/dist/docsify.min.js"></script> -->
-  <script src="https://cdn.jsdelivr.net/gh/hibbitts-design/docsify@latest/dist/docsify.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/hibbitts-design/docsify@5/docsify.min.js"></script>
   <!-- <script src="assets/vendor/docsify/docsify.min.js"></script> -->
 
   <!-- Adjust Page Margins When Standalone or Embedded -->
@@ -2730,7 +2742,7 @@
   </script>
 
   <!-- Frontmatter Plugin -->
-  <script src="https://cdn.jsdelivr.net/gh/hibbitts-design/docsify@latest/dist/plugins/front-matter.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/hibbitts-design/docsify@5/plugins/front-matter.min.js"></script>
 
   <!-- Image Grid Plugin -->
   <script src="assets/vendor/docsify/plugins/custom/docsify-img-grid.js"></script>
@@ -2761,7 +2773,7 @@
 
   <!-- Experimental responsive tables -->
   <script>
-     if ((window.$docsify['basePath'] === undefined) || (!(getURLParameterByName(['responsive-tables', 'responsiveTables'], null, null, window.location.href, true) === 'false'))) {
+    if (!(window.$docsify['basePath'] === undefined) && (getURLParameterByName(['responsive-tables', 'responsiveTables'], null, null, window.location.href, true) === 'true')) {
       document.write('<script src="assets/vendor/docsify/plugins/custom/docsify-responsive-tables.js"><\/script>');
     }
   </script>
@@ -2770,6 +2782,13 @@
   <script>
     if (!(window.$docsify['basePath'] === undefined) && (getURLParameterByName(['sidebar-collapse', 'sidebarCollapse'], null, null, window.location.href, true) === 'true')) {
       document.write('<script src="assets/vendor/docsify/plugins/custom/docsify-sidebar-expand-collapse.js"><\/script>');
+    }
+  </script>
+
+  <!-- Spotlight plugin -->
+  <script>
+    if (!(window.$docsify['basePath'] === undefined) && (getURLParameterByName('spotlight', null, null, window.location.href, true) === 'true')) {
+      document.write('<script src="assets/vendor/docsify/plugins/custom/spotlight.js"><\/script>');
     }
   </script>
 
