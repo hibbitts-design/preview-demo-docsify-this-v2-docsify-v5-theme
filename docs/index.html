@@ -325,9 +325,6 @@
           const cb5 = document.querySelector('#toch1');
           const cb6 = document.querySelector('#toch2');
           const cb7 = document.querySelector('#toch3');
-          // console.log (cb5.checked,cb6.checked,cb7.checked );
-          // console.log ( (!(cb5.checked) && (cb6.checked) && (cb7.checked)) );
-          // console.log ( ((cb5.checked === false) && (cb6.checked === false) && (cb7.checked === false)) === true );
 
           if (URLparms.includes("&toc=true") || URLparms.includes("&toc-narrow=true")) {
             if (((cb5.checked === false) && (cb6.checked === false) && (cb7.checked === false))) {
@@ -1042,24 +1039,16 @@
     }
 
     function setFavicon(favImage) {
-      // console.log(favImage);
       let headTitle = document.querySelector('head');
       let setFavicon = document.createElement('link');
       setFavicon.setAttribute('rel', 'shortcut icon');
       setFavicon.setAttribute('href', favImage);
-      // console.log(setFavicon);
       headTitle.appendChild(setFavicon);
       let appleTouchIcon = document.createElement('link');
       appleTouchIcon.setAttribute('rel', 'apple-touch-icon');
       appleTouchIcon.setAttribute('href', favImage);
       headTitle.appendChild(appleTouchIcon);
-      // console.log(appleTouchIcon);
     }
-
-    // console.log (getURLParameterByName(['standalone', 'embedded']));
-    // console.log (!(getURLParameterByName('navbar')));
-    // console.log (standalone);
-    // console.log (navbar);
 
     // Ensure the link for displayed site name is correct after scrolling to id element
     // This code was developed with the assistance of ChatGPT, an AI language model by OpenAI
@@ -1335,10 +1324,8 @@
 
               // Assemble filtered URL parameters from the array into a single string
               var URLparms = filteredParams.length > 0 ? '&' + filteredParams.join('&') : '';
-              // console.log(URLparms);
 
               url = url.replace(/[?].*/, ''); // Strips anything after ?
-              // console.log(url); //www.example.com
 
               const links = Array.from(htmlElement.querySelectorAll('a'));
 
@@ -1347,7 +1334,6 @@
               if (!fileExt) {
                 fileExt = getFileExtension(getURLParameterByName('homepage', null, null, window.location.href, true));
               }
-              // console.log(fileExt);
 
               /* Javascript generated/assisted by Anthropic Claude AI */
               // PATCH START: Workaround for Docsify upstream bug - relative path handling in sub-documents
@@ -1468,7 +1454,6 @@
                 if (((window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches && (darkModeEnabled === 'auto') || darkModeEnabled === 'true') || darkModeEnabled === 'on' ||
                   darkModeEnabled === true)) {
                   // dark mode
-                  // console.log("dark");
                   if (enabledarkmode || darkmode) {
                     embeds.forEach(embed => {
                       embed.setAttribute('data-card-theme', 'dark');
@@ -1476,14 +1461,11 @@
                   }
                 } else {
                   // light mode
-                  // console.log("light");
                   embeds.forEach(embed => {
                     embed.setAttribute('data-card-theme', 'light');
                   });
                 }
                 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function (e) {
-                  // console.log(`changed to ${e.matches ? "dark" : "light"} mode`);
-                  // console.log(e.matches);            
                   if (enabledarkmode || darkmode) {
                     document.location.reload();
                   }
@@ -1495,14 +1477,12 @@
               if (currentBasePath.includes("raw.githubusercontent.com") || currentBasePath.includes("raw.codeberg.page")) {
                 const images = Array.from(htmlElement.querySelectorAll('img'));
                 for (const image of images) {
-                  // console.log(image.getAttribute('src'));
                   let url = image.getAttribute('src');
                   if (!(url.includes('://') > 0 || url.startsWith('//'))) {
                     // URL is relative
                     url = url.replace(/^\/+/g, '');
                     url = currentBasePath + '/' + url;
                     image.setAttribute('src', url);
-                    // console.log("changed src");
                   }
                 }
               }
@@ -1851,20 +1831,15 @@
           hook.ready(function () {
 
             // Original code by @rizdaprasetya and further improved with the assistance of ChatGPT, an AI language model by OpenAI
-            // true = show debug log
-            let dd = false;
             let TARGET_QUERY = 'id';
             let SCROLL_DELAY = 500; // in milliseconds
             let EXCLUDED_PARENT_CLASS = 'cover'; // Class of parent to exclude
             let location = window.location;
 
-            dd && console.log('custom scroll plugin called!');
-
             // Get topMargin from Docsify config or use default
             // let topMargin = (window.$docsify && window.$docsify.topMargin) || 0;
             let topMargin = parseInt(getComputedStyle(document.documentElement)
               .getPropertyValue('--scroll-padding-top')) || 0;
-            dd && console.log('topMargin setting:', topMargin);
 
             // Build the current URL without the hash
             let currentUrlWithoutHash = new URL(
@@ -1882,17 +1857,14 @@
 
             // Check if the URL contains the 'id' query parameter in either search or hash
             if (isUrlHasIdQuery || isHashHasIdQuery) {
-              dd && console.log('url or hash has id, will scroll to element');
 
               // Get the 'id' from either search or hash
               let urlId = isUrlHasIdQuery ? urlQueryParam.get(TARGET_QUERY) : hashParams.get(TARGET_QUERY);
 
               // Delay the scrolling to ensure everything is loaded
               setTimeout(function () {
-                dd && console.log('will scroll now!');
                 try {
                   let targetElement = document.getElementById(urlId); // Use `getElementById` to directly reference the element
-                  dd && console.log('Target element ID:', urlId);
                   if (targetElement) {
                     // Check if the target element is within an excluded parent
                     let excludedParent = targetElement.closest('.' + EXCLUDED_PARENT_CLASS);
@@ -1907,22 +1879,18 @@
                         // Ensure we don't scroll above the top of the page
                         scrollTop = Math.max(0, scrollTop);
 
-                        dd && console.log('scrolling to position:', scrollTop, '(element top:', elementTop, '- topMargin:', topMargin, ')');
-
                         // Scroll smoothly to the element's top position minus topMargin
                         window.scrollTo({
                           top: scrollTop,
                           behavior: 'smooth'
                         });
                       });
-                    } else {
-                      dd && console.log('Target is within an excluded parent:', excludedParent);
                     }
                   } else {
-                    dd && console.log('Element not found');
+                    console.log('Element not found');
                   }
                 } catch (e) {
-                  dd && console.log('custom scroll failed', e);
+                  console.log('custom scroll failed', e);
                 }
               }, SCROLL_DELAY);
             }
@@ -2312,7 +2280,6 @@
 
         // TODO: Parse numbers?
 
-        // console.log(value, key);
         if (key === 'basePath' && !(allowedDomains === '')) {
           const { hostname } = new URL(value);
           if (!(allowedDomains.includes(hostname))) {
@@ -2357,8 +2324,6 @@
 
     // If switch of light/dark theme mode
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function (e) {
-      // console.log(`changed to ${e.matches ? "dark" : "light"} mode`);
-      // console.log(e.matches);
       updateThemeModeLinkColors();
     });
 
@@ -2440,28 +2405,23 @@
   <!-- Load default or custom favicon file -->
   <script>
     const favicon = getURLParameterByName('loadFavicon', null, null, window.location.href, true);
-    // console.log(favicon);
     if ((favicon !== false) && getURLParameterByName('basePath')) {
       const fileUrl = window.$docsify['basePath'] + '/' + favicon;
       checkIfFileExists(fileUrl)
         .then(exists => {
           if (exists) {
-            // console.log("File exists.");
             // Perform actions when the file exists
             setFavicon(fileUrl);
           } else {
-            // console.log("File does not exist.");
             // Perform actions when the file does not exist
             setFavicon('assets/favicon/favicon.png');
           }
         })
         .catch(error => {
-          // console.error("Error occurred while checking the file:", error);
           // Handle the error
           setFavicon('assets/favicon/favicon.png');
         });
     } else {
-      // console.log ("use standard favicon");
       setFavicon('assets/favicon/favicon.png');
     }
   </script>
@@ -2533,9 +2493,6 @@
 
   <!-- Optionally enable Hypothesis -->
   <script>
-    // console.log(getURLParameterByName('hypothesis'));
-    // console.log(getURLParameterByName('hypothesis', null, null, window.location.href, true) === true);
-    // console.log(getURLParameterByName('hypothesis', null, null, window.location.href, true) === 'true');
     if (getURLParameterByName('hypothesis', null, null, window.location.href, true) === 'true' && getURLParameterByName('basePath')) {
       document.write('<script async src="https://hypothes.is/embed.js"><\/script>');
     }
@@ -2583,7 +2540,6 @@
       // Change header weight if headerweight parameter present
       headerweight = getURLParameterByName(['header-weight', 'headerWeight'], null, null, window.location.href, true);
       if (!(headerweight === false)) {
-        // console.log(headerweight);
         document.documentElement.style.setProperty('--heading-font-weight', headerweight);
       }
 
@@ -2685,9 +2641,7 @@
 
       // Enable dark theme CSS files loaded if dark-mode parameter is true
       var enabledarkmode = getURLParameterByName(['dark-mode', 'darkMode'], null, null, window.location.href, true);
-      // console.log(enabledarkmode);
       if (enabledarkmode === 'auto' || darkmode === 'auto') {
-        // console.log(enabledarkmode);
         document.querySelector('link[data-sheet="dark-mode-auto"]').disabled = false;
       } else if (enabledarkmode === 'on' || enabledarkmode === 'true' || darkmode === 'on') {
         document.querySelector('link[data-sheet="dark-mode"]').disabled = false;
